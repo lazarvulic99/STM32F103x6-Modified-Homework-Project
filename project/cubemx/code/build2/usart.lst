@@ -1,0 +1,362 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usart.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+  16              		.align	1
+  17              		.global	MX_USART1_UART_Init
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	MX_USART1_UART_Init:
+  25              	.LFB65:
+  26              		.file 1 "../Core/Src/usart.c"
+   1:../Core/Src/usart.c **** 
+  27              		.loc 1 32 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  36              		.loc 1 41 3 view .LVU1
+  37              		.loc 1 41 19 is_stmt 0 view .LVU2
+  38 0002 0A48     		ldr	r0, .L5
+  39 0004 0A4B     		ldr	r3, .L5+4
+  40 0006 0360     		str	r3, [r0]
+  41              		.loc 1 42 3 is_stmt 1 view .LVU3
+  42              		.loc 1 42 24 is_stmt 0 view .LVU4
+  43 0008 4FF41653 		mov	r3, #9600
+  44 000c 4360     		str	r3, [r0, #4]
+  45              		.loc 1 43 3 is_stmt 1 view .LVU5
+  46              		.loc 1 43 26 is_stmt 0 view .LVU6
+  47 000e 0023     		movs	r3, #0
+  48 0010 8360     		str	r3, [r0, #8]
+  49              		.loc 1 44 3 is_stmt 1 view .LVU7
+  50              		.loc 1 44 24 is_stmt 0 view .LVU8
+  51 0012 C360     		str	r3, [r0, #12]
+  52              		.loc 1 45 3 is_stmt 1 view .LVU9
+  53              		.loc 1 45 22 is_stmt 0 view .LVU10
+  54 0014 0361     		str	r3, [r0, #16]
+  55              		.loc 1 46 3 is_stmt 1 view .LVU11
+  56              		.loc 1 46 20 is_stmt 0 view .LVU12
+  57 0016 0C22     		movs	r2, #12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 2
+
+
+  58 0018 4261     		str	r2, [r0, #20]
+  59              		.loc 1 47 3 is_stmt 1 view .LVU13
+  60              		.loc 1 47 25 is_stmt 0 view .LVU14
+  61 001a 8361     		str	r3, [r0, #24]
+  62              		.loc 1 48 3 is_stmt 1 view .LVU15
+  63              		.loc 1 48 28 is_stmt 0 view .LVU16
+  64 001c C361     		str	r3, [r0, #28]
+  65              		.loc 1 49 3 is_stmt 1 view .LVU17
+  66              		.loc 1 49 7 is_stmt 0 view .LVU18
+  67 001e 054B     		ldr	r3, .L5+8
+  68 0020 9847     		blx	r3
+  69              	.LVL0:
+  70              		.loc 1 49 6 view .LVU19
+  71 0022 00B9     		cbnz	r0, .L4
+  72              	.L1:
+  73              		.loc 1 57 1 view .LVU20
+  74 0024 08BD     		pop	{r3, pc}
+  75              	.L4:
+  76              		.loc 1 51 5 is_stmt 1 view .LVU21
+  77 0026 044B     		ldr	r3, .L5+12
+  78 0028 9847     		blx	r3
+  79              	.LVL1:
+  80              		.loc 1 57 1 is_stmt 0 view .LVU22
+  81 002a FBE7     		b	.L1
+  82              	.L6:
+  83              		.align	2
+  84              	.L5:
+  85 002c 00000000 		.word	.LANCHOR0
+  86 0030 00380140 		.word	1073821696
+  87 0034 00000000 		.word	HAL_UART_Init
+  88 0038 00000000 		.word	Error_Handler
+  89              		.cfi_endproc
+  90              	.LFE65:
+  92              		.section	.text.HAL_UART_MspInit,"ax",%progbits
+  93              		.align	1
+  94              		.global	HAL_UART_MspInit
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  98              		.fpu softvfp
+ 100              	HAL_UART_MspInit:
+ 101              	.LVL2:
+ 102              	.LFB66:
+ 103              		.loc 1 60 1 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 24
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		.loc 1 60 1 is_stmt 0 view .LVU24
+ 108 0000 70B5     		push	{r4, r5, r6, lr}
+ 109              	.LCFI1:
+ 110              		.cfi_def_cfa_offset 16
+ 111              		.cfi_offset 4, -16
+ 112              		.cfi_offset 5, -12
+ 113              		.cfi_offset 6, -8
+ 114              		.cfi_offset 14, -4
+ 115 0002 86B0     		sub	sp, sp, #24
+ 116              	.LCFI2:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 3
+
+
+ 117              		.cfi_def_cfa_offset 40
+ 118              		.loc 1 62 3 is_stmt 1 view .LVU25
+ 119              		.loc 1 62 20 is_stmt 0 view .LVU26
+ 120 0004 0023     		movs	r3, #0
+ 121 0006 0293     		str	r3, [sp, #8]
+ 122 0008 0393     		str	r3, [sp, #12]
+ 123 000a 0493     		str	r3, [sp, #16]
+ 124 000c 0593     		str	r3, [sp, #20]
+ 125              		.loc 1 63 3 is_stmt 1 view .LVU27
+ 126              		.loc 1 63 16 is_stmt 0 view .LVU28
+ 127 000e 0268     		ldr	r2, [r0]
+ 128              		.loc 1 63 5 view .LVU29
+ 129 0010 1B4B     		ldr	r3, .L11
+ 130 0012 9A42     		cmp	r2, r3
+ 131 0014 01D0     		beq	.L10
+ 132              	.LVL3:
+ 133              	.L7:
+ 134              		.loc 1 93 1 view .LVU30
+ 135 0016 06B0     		add	sp, sp, #24
+ 136              	.LCFI3:
+ 137              		.cfi_remember_state
+ 138              		.cfi_def_cfa_offset 16
+ 139              		@ sp needed
+ 140 0018 70BD     		pop	{r4, r5, r6, pc}
+ 141              	.LVL4:
+ 142              	.L10:
+ 143              	.LCFI4:
+ 144              		.cfi_restore_state
+ 145              		.loc 1 69 5 is_stmt 1 view .LVU31
+ 146              	.LBB2:
+ 147              		.loc 1 69 5 view .LVU32
+ 148              		.loc 1 69 5 view .LVU33
+ 149 001a 03F55843 		add	r3, r3, #55296
+ 150 001e 9A69     		ldr	r2, [r3, #24]
+ 151 0020 42F48042 		orr	r2, r2, #16384
+ 152 0024 9A61     		str	r2, [r3, #24]
+ 153              		.loc 1 69 5 view .LVU34
+ 154 0026 9A69     		ldr	r2, [r3, #24]
+ 155 0028 02F48042 		and	r2, r2, #16384
+ 156 002c 0092     		str	r2, [sp]
+ 157              		.loc 1 69 5 view .LVU35
+ 158 002e 009A     		ldr	r2, [sp]
+ 159              	.LBE2:
+ 160              		.loc 1 69 5 view .LVU36
+ 161              		.loc 1 71 5 view .LVU37
+ 162              	.LBB3:
+ 163              		.loc 1 71 5 view .LVU38
+ 164              		.loc 1 71 5 view .LVU39
+ 165 0030 9A69     		ldr	r2, [r3, #24]
+ 166 0032 42F00402 		orr	r2, r2, #4
+ 167 0036 9A61     		str	r2, [r3, #24]
+ 168              		.loc 1 71 5 view .LVU40
+ 169 0038 9B69     		ldr	r3, [r3, #24]
+ 170 003a 03F00403 		and	r3, r3, #4
+ 171 003e 0193     		str	r3, [sp, #4]
+ 172              		.loc 1 71 5 view .LVU41
+ 173 0040 019B     		ldr	r3, [sp, #4]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 4
+
+
+ 174              	.LBE3:
+ 175              		.loc 1 71 5 view .LVU42
+ 176              		.loc 1 76 5 view .LVU43
+ 177              		.loc 1 76 25 is_stmt 0 view .LVU44
+ 178 0042 4FF40073 		mov	r3, #512
+ 179 0046 0293     		str	r3, [sp, #8]
+ 180              		.loc 1 77 5 is_stmt 1 view .LVU45
+ 181              		.loc 1 77 26 is_stmt 0 view .LVU46
+ 182 0048 0223     		movs	r3, #2
+ 183 004a 0393     		str	r3, [sp, #12]
+ 184              		.loc 1 78 5 is_stmt 1 view .LVU47
+ 185              		.loc 1 78 27 is_stmt 0 view .LVU48
+ 186 004c 0323     		movs	r3, #3
+ 187 004e 0593     		str	r3, [sp, #20]
+ 188              		.loc 1 79 5 is_stmt 1 view .LVU49
+ 189 0050 0C4E     		ldr	r6, .L11+4
+ 190 0052 02A9     		add	r1, sp, #8
+ 191 0054 3046     		mov	r0, r6
+ 192              	.LVL5:
+ 193              		.loc 1 79 5 is_stmt 0 view .LVU50
+ 194 0056 0C4D     		ldr	r5, .L11+8
+ 195 0058 A847     		blx	r5
+ 196              	.LVL6:
+ 197              		.loc 1 81 5 is_stmt 1 view .LVU51
+ 198              		.loc 1 81 25 is_stmt 0 view .LVU52
+ 199 005a 4FF48063 		mov	r3, #1024
+ 200 005e 0293     		str	r3, [sp, #8]
+ 201              		.loc 1 82 5 is_stmt 1 view .LVU53
+ 202              		.loc 1 82 26 is_stmt 0 view .LVU54
+ 203 0060 0024     		movs	r4, #0
+ 204 0062 0394     		str	r4, [sp, #12]
+ 205              		.loc 1 83 5 is_stmt 1 view .LVU55
+ 206              		.loc 1 83 26 is_stmt 0 view .LVU56
+ 207 0064 0494     		str	r4, [sp, #16]
+ 208              		.loc 1 84 5 is_stmt 1 view .LVU57
+ 209 0066 02A9     		add	r1, sp, #8
+ 210 0068 3046     		mov	r0, r6
+ 211 006a A847     		blx	r5
+ 212              	.LVL7:
+ 213              		.loc 1 87 5 view .LVU58
+ 214 006c 2246     		mov	r2, r4
+ 215 006e 0521     		movs	r1, #5
+ 216 0070 2520     		movs	r0, #37
+ 217 0072 064B     		ldr	r3, .L11+12
+ 218 0074 9847     		blx	r3
+ 219              	.LVL8:
+ 220              		.loc 1 88 5 view .LVU59
+ 221 0076 2520     		movs	r0, #37
+ 222 0078 054B     		ldr	r3, .L11+16
+ 223 007a 9847     		blx	r3
+ 224              	.LVL9:
+ 225              		.loc 1 93 1 is_stmt 0 view .LVU60
+ 226 007c CBE7     		b	.L7
+ 227              	.L12:
+ 228 007e 00BF     		.align	2
+ 229              	.L11:
+ 230 0080 00380140 		.word	1073821696
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 5
+
+
+ 231 0084 00080140 		.word	1073809408
+ 232 0088 00000000 		.word	HAL_GPIO_Init
+ 233 008c 00000000 		.word	HAL_NVIC_SetPriority
+ 234 0090 00000000 		.word	HAL_NVIC_EnableIRQ
+ 235              		.cfi_endproc
+ 236              	.LFE66:
+ 238              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
+ 239              		.align	1
+ 240              		.global	HAL_UART_MspDeInit
+ 241              		.syntax unified
+ 242              		.thumb
+ 243              		.thumb_func
+ 244              		.fpu softvfp
+ 246              	HAL_UART_MspDeInit:
+ 247              	.LVL10:
+ 248              	.LFB67:
+ 249              		.loc 1 96 1 is_stmt 1 view -0
+ 250              		.cfi_startproc
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253              		.loc 1 96 1 is_stmt 0 view .LVU62
+ 254 0000 08B5     		push	{r3, lr}
+ 255              	.LCFI5:
+ 256              		.cfi_def_cfa_offset 8
+ 257              		.cfi_offset 3, -8
+ 258              		.cfi_offset 14, -4
+ 259              		.loc 1 98 3 is_stmt 1 view .LVU63
+ 260              		.loc 1 98 16 is_stmt 0 view .LVU64
+ 261 0002 0268     		ldr	r2, [r0]
+ 262              		.loc 1 98 5 view .LVU65
+ 263 0004 084B     		ldr	r3, .L17
+ 264 0006 9A42     		cmp	r2, r3
+ 265 0008 00D0     		beq	.L16
+ 266              	.LVL11:
+ 267              	.L13:
+ 268              		.loc 1 118 1 view .LVU66
+ 269 000a 08BD     		pop	{r3, pc}
+ 270              	.LVL12:
+ 271              	.L16:
+ 272              		.loc 1 104 5 is_stmt 1 view .LVU67
+ 273 000c 074A     		ldr	r2, .L17+4
+ 274 000e 9369     		ldr	r3, [r2, #24]
+ 275 0010 23F48043 		bic	r3, r3, #16384
+ 276 0014 9361     		str	r3, [r2, #24]
+ 277              		.loc 1 110 5 view .LVU68
+ 278 0016 4FF4C061 		mov	r1, #1536
+ 279 001a 0548     		ldr	r0, .L17+8
+ 280              	.LVL13:
+ 281              		.loc 1 110 5 is_stmt 0 view .LVU69
+ 282 001c 054B     		ldr	r3, .L17+12
+ 283 001e 9847     		blx	r3
+ 284              	.LVL14:
+ 285              		.loc 1 113 5 is_stmt 1 view .LVU70
+ 286 0020 2520     		movs	r0, #37
+ 287 0022 054B     		ldr	r3, .L17+16
+ 288 0024 9847     		blx	r3
+ 289              	.LVL15:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 6
+
+
+ 290              		.loc 1 118 1 is_stmt 0 view .LVU71
+ 291 0026 F0E7     		b	.L13
+ 292              	.L18:
+ 293              		.align	2
+ 294              	.L17:
+ 295 0028 00380140 		.word	1073821696
+ 296 002c 00100240 		.word	1073876992
+ 297 0030 00080140 		.word	1073809408
+ 298 0034 00000000 		.word	HAL_GPIO_DeInit
+ 299 0038 00000000 		.word	HAL_NVIC_DisableIRQ
+ 300              		.cfi_endproc
+ 301              	.LFE67:
+ 303              		.global	huart1
+ 304              		.section	.bss.huart1,"aw",%nobits
+ 305              		.align	2
+ 306              		.set	.LANCHOR0,. + 0
+ 309              	huart1:
+ 310 0000 00000000 		.space	68
+ 310      00000000 
+ 310      00000000 
+ 310      00000000 
+ 310      00000000 
+ 311              		.text
+ 312              	.Letext0:
+ 313              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 314              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 315              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 316              		.file 5 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 317              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 318              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 319              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 320              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 321              		.file 10 "../Core/Inc/main.h"
+ 322              		.file 11 "../Core/Inc/usart.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usart.c
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:16     .text.MX_USART1_UART_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:24     .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:85     .text.MX_USART1_UART_Init:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:93     .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:100    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:230    .text.HAL_UART_MspInit:0000000000000080 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:239    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:246    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:295    .text.HAL_UART_MspDeInit:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:309    .bss.huart1:0000000000000000 huart1
+C:\Users\Lenovo\AppData\Local\Temp\ccxfv27C.s:305    .bss.huart1:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_UART_Init
+Error_Handler
+HAL_GPIO_Init
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_GPIO_DeInit
+HAL_NVIC_DisableIRQ

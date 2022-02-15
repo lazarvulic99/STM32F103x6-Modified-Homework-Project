@@ -1,0 +1,474 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"tim.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	HAL_TIM_Base_MspInit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	HAL_TIM_Base_MspInit:
+  25              	.LVL0:
+  26              	.LFB66:
+  27              		.file 1 "../Core/Src/tim.c"
+   1:../Core/Src/tim.c **** 
+  28              		.loc 1 85 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              		.loc 1 87 3 view .LVU1
+  34              		.loc 1 87 20 is_stmt 0 view .LVU2
+  35 0000 0268     		ldr	r2, [r0]
+  36              		.loc 1 87 5 view .LVU3
+  37 0002 094B     		ldr	r3, .L8
+  38 0004 9A42     		cmp	r2, r3
+  39 0006 00D0     		beq	.L7
+  40 0008 7047     		bx	lr
+  41              	.L7:
+  42              		.loc 1 85 1 view .LVU4
+  43 000a 82B0     		sub	sp, sp, #8
+  44              	.LCFI0:
+  45              		.cfi_def_cfa_offset 8
+  46              		.loc 1 93 5 is_stmt 1 view .LVU5
+  47              	.LBB2:
+  48              		.loc 1 93 5 view .LVU6
+  49              		.loc 1 93 5 view .LVU7
+  50 000c 03F50333 		add	r3, r3, #134144
+  51 0010 DA69     		ldr	r2, [r3, #28]
+  52 0012 42F00202 		orr	r2, r2, #2
+  53 0016 DA61     		str	r2, [r3, #28]
+  54              		.loc 1 93 5 view .LVU8
+  55 0018 DB69     		ldr	r3, [r3, #28]
+  56 001a 03F00203 		and	r3, r3, #2
+  57 001e 0193     		str	r3, [sp, #4]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 2
+
+
+  58              		.loc 1 93 5 view .LVU9
+  59 0020 019B     		ldr	r3, [sp, #4]
+  60              	.LBE2:
+  61              		.loc 1 93 5 view .LVU10
+  62              		.loc 1 98 1 is_stmt 0 view .LVU11
+  63 0022 02B0     		add	sp, sp, #8
+  64              	.LCFI1:
+  65              		.cfi_def_cfa_offset 0
+  66              		@ sp needed
+  67 0024 7047     		bx	lr
+  68              	.L9:
+  69 0026 00BF     		.align	2
+  70              	.L8:
+  71 0028 00040040 		.word	1073742848
+  72              		.cfi_endproc
+  73              	.LFE66:
+  75              		.section	.text.HAL_TIM_MspPostInit,"ax",%progbits
+  76              		.align	1
+  77              		.global	HAL_TIM_MspPostInit
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu softvfp
+  83              	HAL_TIM_MspPostInit:
+  84              	.LVL1:
+  85              	.LFB67:
+  86              		.loc 1 100 1 is_stmt 1 view -0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 24
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+  90              		.loc 1 100 1 is_stmt 0 view .LVU13
+  91 0000 00B5     		push	{lr}
+  92              	.LCFI2:
+  93              		.cfi_def_cfa_offset 4
+  94              		.cfi_offset 14, -4
+  95 0002 87B0     		sub	sp, sp, #28
+  96              	.LCFI3:
+  97              		.cfi_def_cfa_offset 32
+  98              		.loc 1 102 3 is_stmt 1 view .LVU14
+  99              		.loc 1 102 20 is_stmt 0 view .LVU15
+ 100 0004 0023     		movs	r3, #0
+ 101 0006 0293     		str	r3, [sp, #8]
+ 102 0008 0393     		str	r3, [sp, #12]
+ 103 000a 0493     		str	r3, [sp, #16]
+ 104 000c 0593     		str	r3, [sp, #20]
+ 105              		.loc 1 103 3 is_stmt 1 view .LVU16
+ 106              		.loc 1 103 15 is_stmt 0 view .LVU17
+ 107 000e 0268     		ldr	r2, [r0]
+ 108              		.loc 1 103 5 view .LVU18
+ 109 0010 0D4B     		ldr	r3, .L14
+ 110 0012 9A42     		cmp	r2, r3
+ 111 0014 02D0     		beq	.L13
+ 112              	.LVL2:
+ 113              	.L10:
+ 114              		.loc 1 123 1 view .LVU19
+ 115 0016 07B0     		add	sp, sp, #28
+ 116              	.LCFI4:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 3
+
+
+ 117              		.cfi_remember_state
+ 118              		.cfi_def_cfa_offset 4
+ 119              		@ sp needed
+ 120 0018 5DF804FB 		ldr	pc, [sp], #4
+ 121              	.LVL3:
+ 122              	.L13:
+ 123              	.LCFI5:
+ 124              		.cfi_restore_state
+ 125              		.loc 1 109 5 is_stmt 1 view .LVU20
+ 126              	.LBB3:
+ 127              		.loc 1 109 5 view .LVU21
+ 128              		.loc 1 109 5 view .LVU22
+ 129 001c 03F50333 		add	r3, r3, #134144
+ 130 0020 9A69     		ldr	r2, [r3, #24]
+ 131 0022 42F00402 		orr	r2, r2, #4
+ 132 0026 9A61     		str	r2, [r3, #24]
+ 133              		.loc 1 109 5 view .LVU23
+ 134 0028 9B69     		ldr	r3, [r3, #24]
+ 135 002a 03F00403 		and	r3, r3, #4
+ 136 002e 0193     		str	r3, [sp, #4]
+ 137              		.loc 1 109 5 view .LVU24
+ 138 0030 019B     		ldr	r3, [sp, #4]
+ 139              	.LBE3:
+ 140              		.loc 1 109 5 view .LVU25
+ 141              		.loc 1 113 5 view .LVU26
+ 142              		.loc 1 113 25 is_stmt 0 view .LVU27
+ 143 0032 4023     		movs	r3, #64
+ 144 0034 0293     		str	r3, [sp, #8]
+ 145              		.loc 1 114 5 is_stmt 1 view .LVU28
+ 146              		.loc 1 114 26 is_stmt 0 view .LVU29
+ 147 0036 0223     		movs	r3, #2
+ 148 0038 0393     		str	r3, [sp, #12]
+ 149              		.loc 1 115 5 is_stmt 1 view .LVU30
+ 150              		.loc 1 115 27 is_stmt 0 view .LVU31
+ 151 003a 0593     		str	r3, [sp, #20]
+ 152              		.loc 1 116 5 is_stmt 1 view .LVU32
+ 153 003c 02A9     		add	r1, sp, #8
+ 154 003e 0348     		ldr	r0, .L14+4
+ 155              	.LVL4:
+ 156              		.loc 1 116 5 is_stmt 0 view .LVU33
+ 157 0040 034B     		ldr	r3, .L14+8
+ 158 0042 9847     		blx	r3
+ 159              	.LVL5:
+ 160              		.loc 1 123 1 view .LVU34
+ 161 0044 E7E7     		b	.L10
+ 162              	.L15:
+ 163 0046 00BF     		.align	2
+ 164              	.L14:
+ 165 0048 00040040 		.word	1073742848
+ 166 004c 00080140 		.word	1073809408
+ 167 0050 00000000 		.word	HAL_GPIO_Init
+ 168              		.cfi_endproc
+ 169              	.LFE67:
+ 171              		.section	.text.MX_TIM3_Init,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	MX_TIM3_Init
+ 174              		.syntax unified
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 4
+
+
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.fpu softvfp
+ 179              	MX_TIM3_Init:
+ 180              	.LFB65:
+ 181              		.loc 1 31 1 is_stmt 1 view -0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 56
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185 0000 00B5     		push	{lr}
+ 186              	.LCFI6:
+ 187              		.cfi_def_cfa_offset 4
+ 188              		.cfi_offset 14, -4
+ 189 0002 8FB0     		sub	sp, sp, #60
+ 190              	.LCFI7:
+ 191              		.cfi_def_cfa_offset 64
+ 192              		.loc 1 37 3 view .LVU36
+ 193              		.loc 1 37 26 is_stmt 0 view .LVU37
+ 194 0004 0023     		movs	r3, #0
+ 195 0006 0A93     		str	r3, [sp, #40]
+ 196 0008 0B93     		str	r3, [sp, #44]
+ 197 000a 0C93     		str	r3, [sp, #48]
+ 198 000c 0D93     		str	r3, [sp, #52]
+ 199              		.loc 1 38 3 is_stmt 1 view .LVU38
+ 200              		.loc 1 38 27 is_stmt 0 view .LVU39
+ 201 000e 0893     		str	r3, [sp, #32]
+ 202 0010 0993     		str	r3, [sp, #36]
+ 203              		.loc 1 39 3 is_stmt 1 view .LVU40
+ 204              		.loc 1 39 22 is_stmt 0 view .LVU41
+ 205 0012 0193     		str	r3, [sp, #4]
+ 206 0014 0293     		str	r3, [sp, #8]
+ 207 0016 0393     		str	r3, [sp, #12]
+ 208 0018 0493     		str	r3, [sp, #16]
+ 209 001a 0593     		str	r3, [sp, #20]
+ 210 001c 0693     		str	r3, [sp, #24]
+ 211 001e 0793     		str	r3, [sp, #28]
+ 212              		.loc 1 44 3 is_stmt 1 view .LVU42
+ 213              		.loc 1 44 18 is_stmt 0 view .LVU43
+ 214 0020 2148     		ldr	r0, .L28
+ 215 0022 224A     		ldr	r2, .L28+4
+ 216 0024 0260     		str	r2, [r0]
+ 217              		.loc 1 45 3 is_stmt 1 view .LVU44
+ 218              		.loc 1 45 24 is_stmt 0 view .LVU45
+ 219 0026 41F63F72 		movw	r2, #7999
+ 220 002a 4260     		str	r2, [r0, #4]
+ 221              		.loc 1 46 3 is_stmt 1 view .LVU46
+ 222              		.loc 1 46 26 is_stmt 0 view .LVU47
+ 223 002c 8360     		str	r3, [r0, #8]
+ 224              		.loc 1 47 3 is_stmt 1 view .LVU48
+ 225              		.loc 1 47 21 is_stmt 0 view .LVU49
+ 226 002e 0922     		movs	r2, #9
+ 227 0030 C260     		str	r2, [r0, #12]
+ 228              		.loc 1 48 3 is_stmt 1 view .LVU50
+ 229              		.loc 1 48 28 is_stmt 0 view .LVU51
+ 230 0032 0361     		str	r3, [r0, #16]
+ 231              		.loc 1 49 3 is_stmt 1 view .LVU52
+ 232              		.loc 1 49 32 is_stmt 0 view .LVU53
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 5
+
+
+ 233 0034 8361     		str	r3, [r0, #24]
+ 234              		.loc 1 50 3 is_stmt 1 view .LVU54
+ 235              		.loc 1 50 7 is_stmt 0 view .LVU55
+ 236 0036 1E4B     		ldr	r3, .L28+8
+ 237 0038 9847     		blx	r3
+ 238              	.LVL6:
+ 239              		.loc 1 50 6 view .LVU56
+ 240 003a 28BB     		cbnz	r0, .L23
+ 241              	.L17:
+ 242              		.loc 1 54 3 is_stmt 1 view .LVU57
+ 243              		.loc 1 54 34 is_stmt 0 view .LVU58
+ 244 003c 4FF48053 		mov	r3, #4096
+ 245 0040 0A93     		str	r3, [sp, #40]
+ 246              		.loc 1 55 3 is_stmt 1 view .LVU59
+ 247              		.loc 1 55 7 is_stmt 0 view .LVU60
+ 248 0042 0AA9     		add	r1, sp, #40
+ 249 0044 1848     		ldr	r0, .L28
+ 250 0046 1B4B     		ldr	r3, .L28+12
+ 251 0048 9847     		blx	r3
+ 252              	.LVL7:
+ 253              		.loc 1 55 6 view .LVU61
+ 254 004a 00BB     		cbnz	r0, .L24
+ 255              	.L18:
+ 256              		.loc 1 59 3 is_stmt 1 view .LVU62
+ 257              		.loc 1 59 7 is_stmt 0 view .LVU63
+ 258 004c 1648     		ldr	r0, .L28
+ 259 004e 1A4B     		ldr	r3, .L28+16
+ 260 0050 9847     		blx	r3
+ 261              	.LVL8:
+ 262              		.loc 1 59 6 view .LVU64
+ 263 0052 F8B9     		cbnz	r0, .L25
+ 264              	.L19:
+ 265              		.loc 1 63 3 is_stmt 1 view .LVU65
+ 266              		.loc 1 63 37 is_stmt 0 view .LVU66
+ 267 0054 0023     		movs	r3, #0
+ 268 0056 0893     		str	r3, [sp, #32]
+ 269              		.loc 1 64 3 is_stmt 1 view .LVU67
+ 270              		.loc 1 64 33 is_stmt 0 view .LVU68
+ 271 0058 0993     		str	r3, [sp, #36]
+ 272              		.loc 1 65 3 is_stmt 1 view .LVU69
+ 273              		.loc 1 65 7 is_stmt 0 view .LVU70
+ 274 005a 08A9     		add	r1, sp, #32
+ 275 005c 1248     		ldr	r0, .L28
+ 276 005e 174B     		ldr	r3, .L28+20
+ 277 0060 9847     		blx	r3
+ 278              	.LVL9:
+ 279              		.loc 1 65 6 view .LVU71
+ 280 0062 D0B9     		cbnz	r0, .L26
+ 281              	.L20:
+ 282              		.loc 1 69 3 is_stmt 1 view .LVU72
+ 283              		.loc 1 69 20 is_stmt 0 view .LVU73
+ 284 0064 6023     		movs	r3, #96
+ 285 0066 0193     		str	r3, [sp, #4]
+ 286              		.loc 1 70 3 is_stmt 1 view .LVU74
+ 287              		.loc 1 70 19 is_stmt 0 view .LVU75
+ 288 0068 0022     		movs	r2, #0
+ 289 006a 0292     		str	r2, [sp, #8]
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 6
+
+
+ 290              		.loc 1 71 3 is_stmt 1 view .LVU76
+ 291              		.loc 1 71 24 is_stmt 0 view .LVU77
+ 292 006c 0223     		movs	r3, #2
+ 293 006e 0393     		str	r3, [sp, #12]
+ 294              		.loc 1 72 3 is_stmt 1 view .LVU78
+ 295              		.loc 1 72 24 is_stmt 0 view .LVU79
+ 296 0070 0592     		str	r2, [sp, #20]
+ 297              		.loc 1 73 3 is_stmt 1 view .LVU80
+ 298              		.loc 1 73 7 is_stmt 0 view .LVU81
+ 299 0072 01A9     		add	r1, sp, #4
+ 300 0074 0C48     		ldr	r0, .L28
+ 301 0076 124B     		ldr	r3, .L28+24
+ 302 0078 9847     		blx	r3
+ 303              	.LVL10:
+ 304              		.loc 1 73 6 view .LVU82
+ 305 007a 88B9     		cbnz	r0, .L27
+ 306              	.L21:
+ 307              		.loc 1 80 3 is_stmt 1 view .LVU83
+ 308 007c 0A48     		ldr	r0, .L28
+ 309 007e 114B     		ldr	r3, .L28+28
+ 310 0080 9847     		blx	r3
+ 311              	.LVL11:
+ 312              		.loc 1 82 1 is_stmt 0 view .LVU84
+ 313 0082 0FB0     		add	sp, sp, #60
+ 314              	.LCFI8:
+ 315              		.cfi_remember_state
+ 316              		.cfi_def_cfa_offset 4
+ 317              		@ sp needed
+ 318 0084 5DF804FB 		ldr	pc, [sp], #4
+ 319              	.L23:
+ 320              	.LCFI9:
+ 321              		.cfi_restore_state
+ 322              		.loc 1 52 5 is_stmt 1 view .LVU85
+ 323 0088 0F4B     		ldr	r3, .L28+32
+ 324 008a 9847     		blx	r3
+ 325              	.LVL12:
+ 326 008c D6E7     		b	.L17
+ 327              	.L24:
+ 328              		.loc 1 57 5 view .LVU86
+ 329 008e 0E4B     		ldr	r3, .L28+32
+ 330 0090 9847     		blx	r3
+ 331              	.LVL13:
+ 332 0092 DBE7     		b	.L18
+ 333              	.L25:
+ 334              		.loc 1 61 5 view .LVU87
+ 335 0094 0C4B     		ldr	r3, .L28+32
+ 336 0096 9847     		blx	r3
+ 337              	.LVL14:
+ 338 0098 DCE7     		b	.L19
+ 339              	.L26:
+ 340              		.loc 1 67 5 view .LVU88
+ 341 009a 0B4B     		ldr	r3, .L28+32
+ 342 009c 9847     		blx	r3
+ 343              	.LVL15:
+ 344 009e E1E7     		b	.L20
+ 345              	.L27:
+ 346              		.loc 1 75 5 view .LVU89
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 7
+
+
+ 347 00a0 094B     		ldr	r3, .L28+32
+ 348 00a2 9847     		blx	r3
+ 349              	.LVL16:
+ 350 00a4 EAE7     		b	.L21
+ 351              	.L29:
+ 352 00a6 00BF     		.align	2
+ 353              	.L28:
+ 354 00a8 00000000 		.word	.LANCHOR0
+ 355 00ac 00040040 		.word	1073742848
+ 356 00b0 00000000 		.word	HAL_TIM_Base_Init
+ 357 00b4 00000000 		.word	HAL_TIM_ConfigClockSource
+ 358 00b8 00000000 		.word	HAL_TIM_PWM_Init
+ 359 00bc 00000000 		.word	HAL_TIMEx_MasterConfigSynchronization
+ 360 00c0 00000000 		.word	HAL_TIM_PWM_ConfigChannel
+ 361 00c4 00000000 		.word	HAL_TIM_MspPostInit
+ 362 00c8 00000000 		.word	Error_Handler
+ 363              		.cfi_endproc
+ 364              	.LFE65:
+ 366              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 367              		.align	1
+ 368              		.global	HAL_TIM_Base_MspDeInit
+ 369              		.syntax unified
+ 370              		.thumb
+ 371              		.thumb_func
+ 372              		.fpu softvfp
+ 374              	HAL_TIM_Base_MspDeInit:
+ 375              	.LVL17:
+ 376              	.LFB68:
+ 377              		.loc 1 126 1 view -0
+ 378              		.cfi_startproc
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381              		@ link register save eliminated.
+ 382              		.loc 1 128 3 view .LVU91
+ 383              		.loc 1 128 20 is_stmt 0 view .LVU92
+ 384 0000 0268     		ldr	r2, [r0]
+ 385              		.loc 1 128 5 view .LVU93
+ 386 0002 054B     		ldr	r3, .L33
+ 387 0004 9A42     		cmp	r2, r3
+ 388 0006 00D0     		beq	.L32
+ 389              	.L30:
+ 390              		.loc 1 139 1 view .LVU94
+ 391 0008 7047     		bx	lr
+ 392              	.L32:
+ 393              		.loc 1 134 5 is_stmt 1 view .LVU95
+ 394 000a 044A     		ldr	r2, .L33+4
+ 395 000c D369     		ldr	r3, [r2, #28]
+ 396 000e 23F00203 		bic	r3, r3, #2
+ 397 0012 D361     		str	r3, [r2, #28]
+ 398              		.loc 1 139 1 is_stmt 0 view .LVU96
+ 399 0014 F8E7     		b	.L30
+ 400              	.L34:
+ 401 0016 00BF     		.align	2
+ 402              	.L33:
+ 403 0018 00040040 		.word	1073742848
+ 404 001c 00100240 		.word	1073876992
+ 405              		.cfi_endproc
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 8
+
+
+ 406              	.LFE68:
+ 408              		.global	htim3
+ 409              		.section	.bss.htim3,"aw",%nobits
+ 410              		.align	2
+ 411              		.set	.LANCHOR0,. + 0
+ 414              	htim3:
+ 415 0000 00000000 		.space	72
+ 415      00000000 
+ 415      00000000 
+ 415      00000000 
+ 415      00000000 
+ 416              		.text
+ 417              	.Letext0:
+ 418              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 419              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 420              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 421              		.file 5 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 422              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 423              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 424              		.file 8 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 425              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
+ 426              		.file 10 "../Core/Inc/main.h"
+ 427              		.file 11 "../Core/Inc/tim.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 tim.c
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:16     .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:24     .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:71     .text.HAL_TIM_Base_MspInit:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:76     .text.HAL_TIM_MspPostInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:83     .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:165    .text.HAL_TIM_MspPostInit:0000000000000048 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:172    .text.MX_TIM3_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:179    .text.MX_TIM3_Init:0000000000000000 MX_TIM3_Init
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:354    .text.MX_TIM3_Init:00000000000000a8 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:367    .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:374    .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:403    .text.HAL_TIM_Base_MspDeInit:0000000000000018 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:414    .bss.htim3:0000000000000000 htim3
+C:\Users\Lenovo\AppData\Local\Temp\cc1qgQDr.s:410    .bss.htim3:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_TIM_Base_Init
+HAL_TIM_ConfigClockSource
+HAL_TIM_PWM_Init
+HAL_TIMEx_MasterConfigSynchronization
+HAL_TIM_PWM_ConfigChannel
+Error_Handler
