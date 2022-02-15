@@ -7,3 +7,5 @@ Add STM32F103x6 and USE_HAL_DRIVERS as GNU C Symbols.
 Add path to arm-none-eabi-gcc toolchain->bin dir and make-gnu bin dir.
 Add -fdebug-prefix-map==../ in makefile.
 Add -mlong-calls in makefile.
+
+Run Proteus as Admin!
