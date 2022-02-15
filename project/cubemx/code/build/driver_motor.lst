@@ -1,0 +1,305 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_motor.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.redefineSteps,"ax",%progbits
+  16              		.align	1
+  17              		.global	redefineSteps
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	redefineSteps:
+  25              	.LVL0:
+  26              	.LFB65:
+  27              		.file 1 "../Core/Src/driver_motor.c"
+   1:../Core/Src/driver_motor.c **** 
+  28              		.loc 1 17 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              		.loc 1 18 2 view .LVU1
+  34              		.loc 1 18 7 is_stmt 0 view .LVU2
+  35 0000 014B     		ldr	r3, .L2
+  36 0002 1860     		str	r0, [r3]
+  37              		.loc 1 19 1 view .LVU3
+  38 0004 7047     		bx	lr
+  39              	.L3:
+  40 0006 00BF     		.align	2
+  41              	.L2:
+  42 0008 00000000 		.word	.LANCHOR0
+  43              		.cfi_endproc
+  44              	.LFE65:
+  46              		.section	.text.stopMotor,"ax",%progbits
+  47              		.align	1
+  48              		.global	stopMotor
+  49              		.syntax unified
+  50              		.thumb
+  51              		.thumb_func
+  52              		.fpu softvfp
+  54              	stopMotor:
+  55              	.LFB66:
+  56              		.loc 1 22 1 is_stmt 1 view -0
+  57              		.cfi_startproc
+  58              		@ args = 0, pretend = 0, frame = 0
+  59              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 2
+
+
+  60              		@ link register save eliminated.
+  61              		.loc 1 23 2 view .LVU5
+  62              		.loc 1 23 7 is_stmt 0 view .LVU6
+  63 0000 024B     		ldr	r3, .L5
+  64 0002 1B68     		ldr	r3, [r3]
+  65              		.loc 1 23 23 view .LVU7
+  66 0004 0022     		movs	r2, #0
+  67 0006 5A63     		str	r2, [r3, #52]
+  68              		.loc 1 24 1 view .LVU8
+  69 0008 7047     		bx	lr
+  70              	.L6:
+  71 000a 00BF     		.align	2
+  72              	.L5:
+  73 000c 00000000 		.word	htim3
+  74              		.cfi_endproc
+  75              	.LFE66:
+  77              		.section	.text.startMotor,"ax",%progbits
+  78              		.align	1
+  79              		.global	startMotor
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu softvfp
+  85              	startMotor:
+  86              	.LFB67:
+  87              		.loc 1 26 1 is_stmt 1 view -0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  92              		.loc 1 27 2 view .LVU10
+  93              		.loc 1 27 7 is_stmt 0 view .LVU11
+  94 0000 024B     		ldr	r3, .L8
+  95 0002 1B68     		ldr	r3, [r3]
+  96              		.loc 1 27 23 view .LVU12
+  97 0004 024A     		ldr	r2, .L8+4
+  98 0006 1268     		ldr	r2, [r2]
+  99 0008 5A63     		str	r2, [r3, #52]
+ 100              		.loc 1 28 1 view .LVU13
+ 101 000a 7047     		bx	lr
+ 102              	.L9:
+ 103              		.align	2
+ 104              	.L8:
+ 105 000c 00000000 		.word	htim3
+ 106 0010 00000000 		.word	.LANCHOR1
+ 107              		.cfi_endproc
+ 108              	.LFE67:
+ 110              		.section	.text.MOTOR_SpeedIncrease,"ax",%progbits
+ 111              		.align	1
+ 112              		.global	MOTOR_SpeedIncrease
+ 113              		.syntax unified
+ 114              		.thumb
+ 115              		.thumb_func
+ 116              		.fpu softvfp
+ 118              	MOTOR_SpeedIncrease:
+ 119              	.LFB68:
+ 120              		.loc 1 31 1 is_stmt 1 view -0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 3
+
+
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125              		.loc 1 32 2 view .LVU15
+ 126              		.loc 1 32 27 is_stmt 0 view .LVU16
+ 127 0000 094B     		ldr	r3, .L12
+ 128 0002 1B68     		ldr	r3, [r3]
+ 129              		.loc 1 32 5 view .LVU17
+ 130 0004 092B     		cmp	r3, #9
+ 131 0006 08D8     		bhi	.L11
+ 132              		.loc 1 34 3 is_stmt 1 view .LVU18
+ 133              		.loc 1 34 27 is_stmt 0 view .LVU19
+ 134 0008 084B     		ldr	r3, .L12+4
+ 135 000a 1A68     		ldr	r2, [r3]
+ 136 000c 0A23     		movs	r3, #10
+ 137 000e B3FBF2F3 		udiv	r3, r3, r2
+ 138              		.loc 1 34 24 view .LVU20
+ 139 0012 054A     		ldr	r2, .L12
+ 140 0014 1168     		ldr	r1, [r2]
+ 141 0016 0B44     		add	r3, r3, r1
+ 142 0018 1360     		str	r3, [r2]
+ 143              	.L11:
+ 144              		.loc 1 36 2 is_stmt 1 view .LVU21
+ 145              		.loc 1 36 7 is_stmt 0 view .LVU22
+ 146 001a 054B     		ldr	r3, .L12+8
+ 147 001c 1B68     		ldr	r3, [r3]
+ 148              		.loc 1 36 23 view .LVU23
+ 149 001e 024A     		ldr	r2, .L12
+ 150 0020 1268     		ldr	r2, [r2]
+ 151 0022 5A63     		str	r2, [r3, #52]
+ 152              		.loc 1 37 1 view .LVU24
+ 153 0024 7047     		bx	lr
+ 154              	.L13:
+ 155 0026 00BF     		.align	2
+ 156              	.L12:
+ 157 0028 00000000 		.word	.LANCHOR1
+ 158 002c 00000000 		.word	.LANCHOR0
+ 159 0030 00000000 		.word	htim3
+ 160              		.cfi_endproc
+ 161              	.LFE68:
+ 163              		.section	.text.MOTOR_SpeedDecrease,"ax",%progbits
+ 164              		.align	1
+ 165              		.global	MOTOR_SpeedDecrease
+ 166              		.syntax unified
+ 167              		.thumb
+ 168              		.thumb_func
+ 169              		.fpu softvfp
+ 171              	MOTOR_SpeedDecrease:
+ 172              	.LFB69:
+ 173              		.loc 1 40 1 is_stmt 1 view -0
+ 174              		.cfi_startproc
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177              		@ link register save eliminated.
+ 178              		.loc 1 41 2 view .LVU26
+ 179              		.loc 1 41 27 is_stmt 0 view .LVU27
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 4
+
+
+ 180 0000 084B     		ldr	r3, .L16
+ 181 0002 1B68     		ldr	r3, [r3]
+ 182              		.loc 1 41 5 view .LVU28
+ 183 0004 43B1     		cbz	r3, .L15
+ 184              		.loc 1 43 3 is_stmt 1 view .LVU29
+ 185              		.loc 1 43 24 is_stmt 0 view .LVU30
+ 186 0006 0749     		ldr	r1, .L16
+ 187 0008 0B68     		ldr	r3, [r1]
+ 188              		.loc 1 43 27 view .LVU31
+ 189 000a 074A     		ldr	r2, .L16+4
+ 190 000c 1068     		ldr	r0, [r2]
+ 191 000e 0A22     		movs	r2, #10
+ 192 0010 B2FBF0F2 		udiv	r2, r2, r0
+ 193              		.loc 1 43 24 view .LVU32
+ 194 0014 9B1A     		subs	r3, r3, r2
+ 195 0016 0B60     		str	r3, [r1]
+ 196              	.L15:
+ 197              		.loc 1 45 2 is_stmt 1 view .LVU33
+ 198              		.loc 1 45 7 is_stmt 0 view .LVU34
+ 199 0018 044B     		ldr	r3, .L16+8
+ 200 001a 1B68     		ldr	r3, [r3]
+ 201              		.loc 1 45 23 view .LVU35
+ 202 001c 014A     		ldr	r2, .L16
+ 203 001e 1268     		ldr	r2, [r2]
+ 204 0020 5A63     		str	r2, [r3, #52]
+ 205              		.loc 1 46 1 view .LVU36
+ 206 0022 7047     		bx	lr
+ 207              	.L17:
+ 208              		.align	2
+ 209              	.L16:
+ 210 0024 00000000 		.word	.LANCHOR1
+ 211 0028 00000000 		.word	.LANCHOR0
+ 212 002c 00000000 		.word	htim3
+ 213              		.cfi_endproc
+ 214              	.LFE69:
+ 216              		.section	.text.MOTOR_Init,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	MOTOR_Init
+ 219              		.syntax unified
+ 220              		.thumb
+ 221              		.thumb_func
+ 222              		.fpu softvfp
+ 224              	MOTOR_Init:
+ 225              	.LFB70:
+ 226              		.loc 1 49 1 is_stmt 1 view -0
+ 227              		.cfi_startproc
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230 0000 08B5     		push	{r3, lr}
+ 231              	.LCFI0:
+ 232              		.cfi_def_cfa_offset 8
+ 233              		.cfi_offset 3, -8
+ 234              		.cfi_offset 14, -4
+ 235              		.loc 1 50 2 view .LVU38
+ 236 0002 0021     		movs	r1, #0
+ 237 0004 0148     		ldr	r0, .L20
+ 238 0006 024B     		ldr	r3, .L20+4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 5
+
+
+ 239 0008 9847     		blx	r3
+ 240              	.LVL1:
+ 241              		.loc 1 51 1 is_stmt 0 view .LVU39
+ 242 000a 08BD     		pop	{r3, pc}
+ 243              	.L21:
+ 244              		.align	2
+ 245              	.L20:
+ 246 000c 00000000 		.word	htim3
+ 247 0010 00000000 		.word	HAL_TIM_PWM_Start
+ 248              		.cfi_endproc
+ 249              	.LFE70:
+ 251              		.global	STEP
+ 252              		.section	.bss.compareRegisterValue,"aw",%nobits
+ 253              		.align	2
+ 254              		.set	.LANCHOR1,. + 0
+ 257              	compareRegisterValue:
+ 258 0000 00000000 		.space	4
+ 259              		.section	.data.STEP,"aw"
+ 260              		.align	2
+ 261              		.set	.LANCHOR0,. + 0
+ 264              	STEP:
+ 265 0000 02000000 		.word	2
+ 266              		.text
+ 267              	.Letext0:
+ 268              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 269              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 270              		.file 4 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 271              		.file 5 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 272              		.file 6 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 273              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 274              		.file 8 "../Core/Inc/tim.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_motor.c
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:16     .text.redefineSteps:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:24     .text.redefineSteps:0000000000000000 redefineSteps
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:42     .text.redefineSteps:0000000000000008 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:47     .text.stopMotor:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:54     .text.stopMotor:0000000000000000 stopMotor
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:73     .text.stopMotor:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:78     .text.startMotor:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:85     .text.startMotor:0000000000000000 startMotor
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:105    .text.startMotor:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:111    .text.MOTOR_SpeedIncrease:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:118    .text.MOTOR_SpeedIncrease:0000000000000000 MOTOR_SpeedIncrease
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:157    .text.MOTOR_SpeedIncrease:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:164    .text.MOTOR_SpeedDecrease:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:171    .text.MOTOR_SpeedDecrease:0000000000000000 MOTOR_SpeedDecrease
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:210    .text.MOTOR_SpeedDecrease:0000000000000024 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:217    .text.MOTOR_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:224    .text.MOTOR_Init:0000000000000000 MOTOR_Init
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:246    .text.MOTOR_Init:000000000000000c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:264    .data.STEP:0000000000000000 STEP
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:253    .bss.compareRegisterValue:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:257    .bss.compareRegisterValue:0000000000000000 compareRegisterValue
+C:\Users\Lenovo\AppData\Local\Temp\cc0L0224.s:260    .data.STEP:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+htim3
+HAL_TIM_PWM_Start

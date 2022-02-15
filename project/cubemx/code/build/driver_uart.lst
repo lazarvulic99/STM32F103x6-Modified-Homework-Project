@@ -1,0 +1,1158 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_uart.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.UART_ReceiveTask,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	UART_ReceiveTask:
+  24              	.LFB71:
+  25              		.file 1 "../Core/Src/driver_uart.c"
+   1:../Core/Src/driver_uart.c **** 
+  26              		.loc 1 55 1 view -0
+  27              		.cfi_startproc
+  28              		@ Volatile: function does not return.
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32              		.loc 1 55 1 is_stmt 0 view .LVU1
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 16
+  40              	.LVL1:
+  41              	.L2:
+  42              		.loc 1 56 2 is_stmt 1 discriminator 1 view .LVU2
+  43              		.loc 1 57 2 discriminator 1 view .LVU3
+  44              		.loc 1 59 3 discriminator 1 view .LVU4
+  45 0004 0122     		movs	r2, #1
+  46 0006 0DF10701 		add	r1, sp, #7
+  47 000a 0948     		ldr	r0, .L4
+  48 000c 094B     		ldr	r3, .L4+4
+  49 000e 9847     		blx	r3
+  50              	.LVL2:
+  51              		.loc 1 60 3 discriminator 1 view .LVU5
+  52 0010 4FF0FF31 		mov	r1, #-1
+  53 0014 0120     		movs	r0, #1
+  54 0016 084B     		ldr	r3, .L4+8
+  55 0018 9847     		blx	r3
+  56              	.LVL3:
+  57              		.loc 1 61 3 discriminator 1 view .LVU6
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 2
+
+
+  58 001a 0023     		movs	r3, #0
+  59 001c 4FF0FF32 		mov	r2, #-1
+  60 0020 0DF10701 		add	r1, sp, #7
+  61 0024 0548     		ldr	r0, .L4+12
+  62 0026 0068     		ldr	r0, [r0]
+  63 0028 054C     		ldr	r4, .L4+16
+  64 002a A047     		blx	r4
+  65              	.LVL4:
+  66              		.loc 1 57 8 discriminator 1 view .LVU7
+  67 002c EAE7     		b	.L2
+  68              	.L5:
+  69 002e 00BF     		.align	2
+  70              	.L4:
+  71 0030 00000000 		.word	huart1
+  72 0034 00000000 		.word	HAL_UART_Receive_IT
+  73 0038 00000000 		.word	ulTaskNotifyTake
+  74 003c 00000000 		.word	.LANCHOR0
+  75 0040 00000000 		.word	xQueueGenericSend
+  76              		.cfi_endproc
+  77              	.LFE71:
+  79              		.section	.text.UART_TransmitTask,"ax",%progbits
+  80              		.align	1
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  84              		.fpu softvfp
+  86              	UART_TransmitTask:
+  87              	.LFB69:
+  88              		.loc 1 27 1 view -0
+  89              		.cfi_startproc
+  90              		@ Volatile: function does not return.
+  91              		@ args = 0, pretend = 0, frame = 8
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              	.LVL5:
+  94              		.loc 1 27 1 is_stmt 0 view .LVU9
+  95 0000 00B5     		push	{lr}
+  96              	.LCFI2:
+  97              		.cfi_def_cfa_offset 4
+  98              		.cfi_offset 14, -4
+  99 0002 83B0     		sub	sp, sp, #12
+ 100              	.LCFI3:
+ 101              		.cfi_def_cfa_offset 16
+ 102              	.LVL6:
+ 103              	.L7:
+ 104              		.loc 1 28 2 is_stmt 1 discriminator 1 view .LVU10
+ 105              		.loc 1 29 2 discriminator 1 view .LVU11
+ 106              		.loc 1 31 3 discriminator 1 view .LVU12
+ 107 0004 4FF0FF32 		mov	r2, #-1
+ 108 0008 0DF10701 		add	r1, sp, #7
+ 109 000c 074B     		ldr	r3, .L9
+ 110 000e 1868     		ldr	r0, [r3]
+ 111 0010 074B     		ldr	r3, .L9+4
+ 112 0012 9847     		blx	r3
+ 113              	.LVL7:
+ 114              		.loc 1 32 3 discriminator 1 view .LVU13
+ 115 0014 0122     		movs	r2, #1
+ 116 0016 0DF10701 		add	r1, sp, #7
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 3
+
+
+ 117 001a 0648     		ldr	r0, .L9+8
+ 118 001c 064B     		ldr	r3, .L9+12
+ 119 001e 9847     		blx	r3
+ 120              	.LVL8:
+ 121              		.loc 1 33 3 discriminator 1 view .LVU14
+ 122 0020 4FF0FF31 		mov	r1, #-1
+ 123 0024 0120     		movs	r0, #1
+ 124 0026 054B     		ldr	r3, .L9+16
+ 125 0028 9847     		blx	r3
+ 126              	.LVL9:
+ 127              		.loc 1 29 8 discriminator 1 view .LVU15
+ 128 002a EBE7     		b	.L7
+ 129              	.L10:
+ 130              		.align	2
+ 131              	.L9:
+ 132 002c 00000000 		.word	.LANCHOR1
+ 133 0030 00000000 		.word	xQueueReceive
+ 134 0034 00000000 		.word	huart1
+ 135 0038 00000000 		.word	HAL_UART_Transmit_IT
+ 136 003c 00000000 		.word	ulTaskNotifyTake
+ 137              		.cfi_endproc
+ 138              	.LFE69:
+ 140              		.section	.text.HAL_UART_TxCpltCallback,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	HAL_UART_TxCpltCallback
+ 143              		.syntax unified
+ 144              		.thumb
+ 145              		.thumb_func
+ 146              		.fpu softvfp
+ 148              	HAL_UART_TxCpltCallback:
+ 149              	.LVL10:
+ 150              	.LFB70:
+ 151              		.loc 1 38 1 view -0
+ 152              		.cfi_startproc
+ 153              		@ args = 0, pretend = 0, frame = 8
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155              		.loc 1 39 2 view .LVU17
+ 156              		.loc 1 39 11 is_stmt 0 view .LVU18
+ 157 0000 0268     		ldr	r2, [r0]
+ 158              		.loc 1 39 31 view .LVU19
+ 159 0002 0E4B     		ldr	r3, .L19
+ 160 0004 1B68     		ldr	r3, [r3]
+ 161              		.loc 1 39 5 view .LVU20
+ 162 0006 9A42     		cmp	r2, r3
+ 163 0008 00D0     		beq	.L18
+ 164 000a 7047     		bx	lr
+ 165              	.L18:
+ 166              		.loc 1 38 1 view .LVU21
+ 167 000c 00B5     		push	{lr}
+ 168              	.LCFI4:
+ 169              		.cfi_def_cfa_offset 4
+ 170              		.cfi_offset 14, -4
+ 171 000e 83B0     		sub	sp, sp, #12
+ 172              	.LCFI5:
+ 173              		.cfi_def_cfa_offset 16
+ 174              	.LBB2:
+ 175              		.loc 1 41 3 is_stmt 1 view .LVU22
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 4
+
+
+ 176              		.loc 1 41 14 is_stmt 0 view .LVU23
+ 177 0010 0023     		movs	r3, #0
+ 178 0012 0193     		str	r3, [sp, #4]
+ 179              		.loc 1 42 3 is_stmt 1 view .LVU24
+ 180 0014 01A9     		add	r1, sp, #4
+ 181 0016 0A4B     		ldr	r3, .L19+4
+ 182 0018 1868     		ldr	r0, [r3]
+ 183              	.LVL11:
+ 184              		.loc 1 42 3 is_stmt 0 view .LVU25
+ 185 001a 0A4B     		ldr	r3, .L19+8
+ 186 001c 9847     		blx	r3
+ 187              	.LVL12:
+ 188              		.loc 1 43 3 is_stmt 1 view .LVU26
+ 189 001e 019B     		ldr	r3, [sp, #4]
+ 190 0020 4BB1     		cbz	r3, .L11
+ 191              		.loc 1 43 3 discriminator 1 view .LVU27
+ 192 0022 4FF0E023 		mov	r3, #-536813568
+ 193 0026 4FF08052 		mov	r2, #268435456
+ 194 002a C3F8042D 		str	r2, [r3, #3332]
+ 195              		.loc 1 43 3 discriminator 1 view .LVU28
+ 196              		.syntax unified
+ 197              	@ 43 "Core/Src/driver_uart.c" 1
+ 198 002e BFF34F8F 		dsb
+ 199              	@ 0 "" 2
+ 200              		.loc 1 43 3 discriminator 1 view .LVU29
+ 201              	@ 43 "Core/Src/driver_uart.c" 1
+ 202 0032 BFF36F8F 		isb
+ 203              	@ 0 "" 2
+ 204              		.loc 1 43 28 discriminator 1 view .LVU30
+ 205              		.thumb
+ 206              		.syntax unified
+ 207              	.L11:
+ 208              	.LBE2:
+ 209              		.loc 1 45 1 is_stmt 0 view .LVU31
+ 210 0036 03B0     		add	sp, sp, #12
+ 211              	.LCFI6:
+ 212              		.cfi_def_cfa_offset 4
+ 213              		@ sp needed
+ 214 0038 5DF804FB 		ldr	pc, [sp], #4
+ 215              	.L20:
+ 216              		.align	2
+ 217              	.L19:
+ 218 003c 00000000 		.word	huart1
+ 219 0040 00000000 		.word	.LANCHOR2
+ 220 0044 00000000 		.word	vTaskNotifyGiveFromISR
+ 221              		.cfi_endproc
+ 222              	.LFE70:
+ 224              		.section	.text.HAL_UART_RxCpltCallback,"ax",%progbits
+ 225              		.align	1
+ 226              		.global	HAL_UART_RxCpltCallback
+ 227              		.syntax unified
+ 228              		.thumb
+ 229              		.thumb_func
+ 230              		.fpu softvfp
+ 232              	HAL_UART_RxCpltCallback:
+ 233              	.LVL13:
+ 234              	.LFB72:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 5
+
+
+ 235              		.loc 1 66 1 is_stmt 1 view -0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 8
+ 238              		@ frame_needed = 0, uses_anonymous_args = 0
+ 239              		.loc 1 67 2 view .LVU33
+ 240              		.loc 1 67 11 is_stmt 0 view .LVU34
+ 241 0000 0268     		ldr	r2, [r0]
+ 242              		.loc 1 67 31 view .LVU35
+ 243 0002 0E4B     		ldr	r3, .L29
+ 244 0004 1B68     		ldr	r3, [r3]
+ 245              		.loc 1 67 5 view .LVU36
+ 246 0006 9A42     		cmp	r2, r3
+ 247 0008 00D0     		beq	.L28
+ 248 000a 7047     		bx	lr
+ 249              	.L28:
+ 250              		.loc 1 66 1 view .LVU37
+ 251 000c 00B5     		push	{lr}
+ 252              	.LCFI7:
+ 253              		.cfi_def_cfa_offset 4
+ 254              		.cfi_offset 14, -4
+ 255 000e 83B0     		sub	sp, sp, #12
+ 256              	.LCFI8:
+ 257              		.cfi_def_cfa_offset 16
+ 258              	.LBB3:
+ 259              		.loc 1 69 3 is_stmt 1 view .LVU38
+ 260              		.loc 1 69 14 is_stmt 0 view .LVU39
+ 261 0010 0023     		movs	r3, #0
+ 262 0012 0193     		str	r3, [sp, #4]
+ 263              		.loc 1 70 3 is_stmt 1 view .LVU40
+ 264 0014 01A9     		add	r1, sp, #4
+ 265 0016 0A4B     		ldr	r3, .L29+4
+ 266 0018 1868     		ldr	r0, [r3]
+ 267              	.LVL14:
+ 268              		.loc 1 70 3 is_stmt 0 view .LVU41
+ 269 001a 0A4B     		ldr	r3, .L29+8
+ 270 001c 9847     		blx	r3
+ 271              	.LVL15:
+ 272              		.loc 1 71 3 is_stmt 1 view .LVU42
+ 273 001e 019B     		ldr	r3, [sp, #4]
+ 274 0020 4BB1     		cbz	r3, .L21
+ 275              		.loc 1 71 3 discriminator 1 view .LVU43
+ 276 0022 4FF0E023 		mov	r3, #-536813568
+ 277 0026 4FF08052 		mov	r2, #268435456
+ 278 002a C3F8042D 		str	r2, [r3, #3332]
+ 279              		.loc 1 71 3 discriminator 1 view .LVU44
+ 280              		.syntax unified
+ 281              	@ 71 "Core/Src/driver_uart.c" 1
+ 282 002e BFF34F8F 		dsb
+ 283              	@ 0 "" 2
+ 284              		.loc 1 71 3 discriminator 1 view .LVU45
+ 285              	@ 71 "Core/Src/driver_uart.c" 1
+ 286 0032 BFF36F8F 		isb
+ 287              	@ 0 "" 2
+ 288              		.loc 1 71 28 discriminator 1 view .LVU46
+ 289              		.thumb
+ 290              		.syntax unified
+ 291              	.L21:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 6
+
+
+ 292              	.LBE3:
+ 293              		.loc 1 73 1 is_stmt 0 view .LVU47
+ 294 0036 03B0     		add	sp, sp, #12
+ 295              	.LCFI9:
+ 296              		.cfi_def_cfa_offset 4
+ 297              		@ sp needed
+ 298 0038 5DF804FB 		ldr	pc, [sp], #4
+ 299              	.L30:
+ 300              		.align	2
+ 301              	.L29:
+ 302 003c 00000000 		.word	huart1
+ 303 0040 00000000 		.word	.LANCHOR3
+ 304 0044 00000000 		.word	vTaskNotifyGiveFromISR
+ 305              		.cfi_endproc
+ 306              	.LFE72:
+ 308              		.section	.rodata.UART_Init.str1.4,"aMS",%progbits,1
+ 309              		.align	2
+ 310              	.LC0:
+ 311 0000 7472616E 		.ascii	"transmitTask\000"
+ 311      736D6974 
+ 311      5461736B 
+ 311      00
+ 312 000d 000000   		.align	2
+ 313              	.LC1:
+ 314 0010 72656365 		.ascii	"receiveTask\000"
+ 314      69766554 
+ 314      61736B00 
+ 315              		.section	.text.UART_Init,"ax",%progbits
+ 316              		.align	1
+ 317              		.global	UART_Init
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.fpu softvfp
+ 323              	UART_Init:
+ 324              	.LFB73:
+ 325              		.loc 1 79 1 is_stmt 1 view -0
+ 326              		.cfi_startproc
+ 327              		@ args = 0, pretend = 0, frame = 0
+ 328              		@ frame_needed = 0, uses_anonymous_args = 0
+ 329 0000 70B5     		push	{r4, r5, r6, lr}
+ 330              	.LCFI10:
+ 331              		.cfi_def_cfa_offset 16
+ 332              		.cfi_offset 4, -16
+ 333              		.cfi_offset 5, -12
+ 334              		.cfi_offset 6, -8
+ 335              		.cfi_offset 14, -4
+ 336 0002 82B0     		sub	sp, sp, #8
+ 337              	.LCFI11:
+ 338              		.cfi_def_cfa_offset 24
+ 339              		.loc 1 80 2 view .LVU49
+ 340 0004 154B     		ldr	r3, .L33
+ 341 0006 0193     		str	r3, [sp, #4]
+ 342 0008 0423     		movs	r3, #4
+ 343 000a 0093     		str	r3, [sp]
+ 344 000c 0023     		movs	r3, #0
+ 345 000e 4022     		movs	r2, #64
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 7
+
+
+ 346 0010 1349     		ldr	r1, .L33+4
+ 347 0012 1448     		ldr	r0, .L33+8
+ 348 0014 144E     		ldr	r6, .L33+12
+ 349 0016 B047     		blx	r6
+ 350              	.LVL16:
+ 351              		.loc 1 82 2 view .LVU50
+ 352              		.loc 1 82 29 is_stmt 0 view .LVU51
+ 353 0018 0022     		movs	r2, #0
+ 354 001a 0121     		movs	r1, #1
+ 355 001c 4020     		movs	r0, #64
+ 356 001e 134D     		ldr	r5, .L33+16
+ 357 0020 A847     		blx	r5
+ 358              	.LVL17:
+ 359              		.loc 1 82 27 view .LVU52
+ 360 0022 134B     		ldr	r3, .L33+20
+ 361 0024 1860     		str	r0, [r3]
+ 362              		.loc 1 83 2 is_stmt 1 view .LVU53
+ 363              		.loc 1 83 29 is_stmt 0 view .LVU54
+ 364 0026 0120     		movs	r0, #1
+ 365 0028 124C     		ldr	r4, .L33+24
+ 366 002a A047     		blx	r4
+ 367              	.LVL18:
+ 368              		.loc 1 83 27 view .LVU55
+ 369 002c 124B     		ldr	r3, .L33+28
+ 370 002e 1860     		str	r0, [r3]
+ 371              		.loc 1 85 2 is_stmt 1 view .LVU56
+ 372 0030 124B     		ldr	r3, .L33+32
+ 373 0032 0193     		str	r3, [sp, #4]
+ 374 0034 1423     		movs	r3, #20
+ 375 0036 0093     		str	r3, [sp]
+ 376 0038 0023     		movs	r3, #0
+ 377 003a 4022     		movs	r2, #64
+ 378 003c 1049     		ldr	r1, .L33+36
+ 379 003e 1148     		ldr	r0, .L33+40
+ 380 0040 B047     		blx	r6
+ 381              	.LVL19:
+ 382              		.loc 1 87 2 view .LVU57
+ 383              		.loc 1 87 28 is_stmt 0 view .LVU58
+ 384 0042 0022     		movs	r2, #0
+ 385 0044 0121     		movs	r1, #1
+ 386 0046 4020     		movs	r0, #64
+ 387 0048 A847     		blx	r5
+ 388              	.LVL20:
+ 389              		.loc 1 87 26 view .LVU59
+ 390 004a 0F4B     		ldr	r3, .L33+44
+ 391 004c 1860     		str	r0, [r3]
+ 392              		.loc 1 88 2 is_stmt 1 view .LVU60
+ 393              		.loc 1 88 28 is_stmt 0 view .LVU61
+ 394 004e 0120     		movs	r0, #1
+ 395 0050 A047     		blx	r4
+ 396              	.LVL21:
+ 397              		.loc 1 88 26 view .LVU62
+ 398 0052 0E4B     		ldr	r3, .L33+48
+ 399 0054 1860     		str	r0, [r3]
+ 400              		.loc 1 89 1 view .LVU63
+ 401 0056 02B0     		add	sp, sp, #8
+ 402              	.LCFI12:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 8
+
+
+ 403              		.cfi_def_cfa_offset 16
+ 404              		@ sp needed
+ 405 0058 70BD     		pop	{r4, r5, r6, pc}
+ 406              	.L34:
+ 407 005a 00BF     		.align	2
+ 408              	.L33:
+ 409 005c 00000000 		.word	.LANCHOR2
+ 410 0060 00000000 		.word	.LC0
+ 411 0064 00000000 		.word	UART_TransmitTask
+ 412 0068 00000000 		.word	xTaskCreate
+ 413 006c 00000000 		.word	xQueueGenericCreate
+ 414 0070 00000000 		.word	.LANCHOR1
+ 415 0074 00000000 		.word	xQueueCreateMutex
+ 416 0078 00000000 		.word	.LANCHOR4
+ 417 007c 00000000 		.word	.LANCHOR3
+ 418 0080 10000000 		.word	.LC1
+ 419 0084 00000000 		.word	UART_ReceiveTask
+ 420 0088 00000000 		.word	.LANCHOR0
+ 421 008c 00000000 		.word	.LANCHOR5
+ 422              		.cfi_endproc
+ 423              	.LFE73:
+ 425              		.section	.text.UART_AsyncTransmitCharacter,"ax",%progbits
+ 426              		.align	1
+ 427              		.global	UART_AsyncTransmitCharacter
+ 428              		.syntax unified
+ 429              		.thumb
+ 430              		.thumb_func
+ 431              		.fpu softvfp
+ 433              	UART_AsyncTransmitCharacter:
+ 434              	.LVL22:
+ 435              	.LFB74:
+ 436              		.loc 1 95 1 is_stmt 1 view -0
+ 437              		.cfi_startproc
+ 438              		@ args = 0, pretend = 0, frame = 8
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440              		.loc 1 95 1 is_stmt 0 view .LVU65
+ 441 0000 30B5     		push	{r4, r5, lr}
+ 442              	.LCFI13:
+ 443              		.cfi_def_cfa_offset 12
+ 444              		.cfi_offset 4, -12
+ 445              		.cfi_offset 5, -8
+ 446              		.cfi_offset 14, -4
+ 447 0002 83B0     		sub	sp, sp, #12
+ 448              	.LCFI14:
+ 449              		.cfi_def_cfa_offset 24
+ 450 0004 8DF80700 		strb	r0, [sp, #7]
+ 451              		.loc 1 96 2 is_stmt 1 view .LVU66
+ 452 0008 0A4D     		ldr	r5, .L37
+ 453 000a 4FF0FF31 		mov	r1, #-1
+ 454 000e 2868     		ldr	r0, [r5]
+ 455              	.LVL23:
+ 456              		.loc 1 96 2 is_stmt 0 view .LVU67
+ 457 0010 094B     		ldr	r3, .L37+4
+ 458 0012 9847     		blx	r3
+ 459              	.LVL24:
+ 460              		.loc 1 98 2 is_stmt 1 view .LVU68
+ 461 0014 0023     		movs	r3, #0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 9
+
+
+ 462 0016 4FF0FF32 		mov	r2, #-1
+ 463 001a 0DF10701 		add	r1, sp, #7
+ 464 001e 0748     		ldr	r0, .L37+8
+ 465 0020 0068     		ldr	r0, [r0]
+ 466 0022 074C     		ldr	r4, .L37+12
+ 467 0024 A047     		blx	r4
+ 468              	.LVL25:
+ 469              		.loc 1 100 2 view .LVU69
+ 470 0026 0023     		movs	r3, #0
+ 471 0028 1A46     		mov	r2, r3
+ 472 002a 1946     		mov	r1, r3
+ 473 002c 2868     		ldr	r0, [r5]
+ 474 002e A047     		blx	r4
+ 475              	.LVL26:
+ 476              		.loc 1 101 1 is_stmt 0 view .LVU70
+ 477 0030 03B0     		add	sp, sp, #12
+ 478              	.LCFI15:
+ 479              		.cfi_def_cfa_offset 12
+ 480              		@ sp needed
+ 481 0032 30BD     		pop	{r4, r5, pc}
+ 482              	.L38:
+ 483              		.align	2
+ 484              	.L37:
+ 485 0034 00000000 		.word	.LANCHOR4
+ 486 0038 00000000 		.word	xQueueSemaphoreTake
+ 487 003c 00000000 		.word	.LANCHOR1
+ 488 0040 00000000 		.word	xQueueGenericSend
+ 489              		.cfi_endproc
+ 490              	.LFE74:
+ 492              		.section	.text.UART_AsyncTransmitString,"ax",%progbits
+ 493              		.align	1
+ 494              		.global	UART_AsyncTransmitString
+ 495              		.syntax unified
+ 496              		.thumb
+ 497              		.thumb_func
+ 498              		.fpu softvfp
+ 500              	UART_AsyncTransmitString:
+ 501              	.LVL27:
+ 502              	.LFB75:
+ 503              		.loc 1 104 1 is_stmt 1 view -0
+ 504              		.cfi_startproc
+ 505              		@ args = 0, pretend = 0, frame = 0
+ 506              		@ frame_needed = 0, uses_anonymous_args = 0
+ 507              		.loc 1 105 2 view .LVU72
+ 508              		.loc 1 105 5 is_stmt 0 view .LVU73
+ 509 0000 F8B1     		cbz	r0, .L44
+ 510              		.loc 1 104 1 view .LVU74
+ 511 0002 70B5     		push	{r4, r5, r6, lr}
+ 512              	.LCFI16:
+ 513              		.cfi_def_cfa_offset 16
+ 514              		.cfi_offset 4, -16
+ 515              		.cfi_offset 5, -12
+ 516              		.cfi_offset 6, -8
+ 517              		.cfi_offset 14, -4
+ 518 0004 0546     		mov	r5, r0
+ 519              		.loc 1 107 3 is_stmt 1 view .LVU75
+ 520 0006 4FF0FF31 		mov	r1, #-1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 10
+
+
+ 521 000a 0E4B     		ldr	r3, .L47
+ 522 000c 1868     		ldr	r0, [r3]
+ 523              	.LVL28:
+ 524              		.loc 1 107 3 is_stmt 0 view .LVU76
+ 525 000e 0E4B     		ldr	r3, .L47+4
+ 526 0010 9847     		blx	r3
+ 527              	.LVL29:
+ 528              		.loc 1 109 3 is_stmt 1 view .LVU77
+ 529              	.LBB4:
+ 530              		.loc 1 109 8 view .LVU78
+ 531              		.loc 1 109 17 is_stmt 0 view .LVU79
+ 532 0012 0024     		movs	r4, #0
+ 533              		.loc 1 109 3 view .LVU80
+ 534 0014 08E0     		b	.L41
+ 535              	.LVL30:
+ 536              	.L42:
+ 537              		.loc 1 111 4 is_stmt 1 discriminator 3 view .LVU81
+ 538 0016 0023     		movs	r3, #0
+ 539 0018 4FF0FF32 		mov	r2, #-1
+ 540 001c 2919     		adds	r1, r5, r4
+ 541 001e 0B48     		ldr	r0, .L47+8
+ 542 0020 0068     		ldr	r0, [r0]
+ 543 0022 0B4E     		ldr	r6, .L47+12
+ 544 0024 B047     		blx	r6
+ 545              	.LVL31:
+ 546              		.loc 1 109 44 discriminator 3 view .LVU82
+ 547              		.loc 1 109 45 is_stmt 0 discriminator 3 view .LVU83
+ 548 0026 0134     		adds	r4, r4, #1
+ 549              	.LVL32:
+ 550              	.L41:
+ 551              		.loc 1 109 24 is_stmt 1 discriminator 1 view .LVU84
+ 552              		.loc 1 109 28 is_stmt 0 discriminator 1 view .LVU85
+ 553 0028 2846     		mov	r0, r5
+ 554 002a 0A4B     		ldr	r3, .L47+16
+ 555 002c 9847     		blx	r3
+ 556              	.LVL33:
+ 557              		.loc 1 109 3 discriminator 1 view .LVU86
+ 558 002e A042     		cmp	r0, r4
+ 559 0030 F1D8     		bhi	.L42
+ 560              	.LBE4:
+ 561              		.loc 1 115 3 is_stmt 1 view .LVU87
+ 562 0032 0023     		movs	r3, #0
+ 563 0034 1A46     		mov	r2, r3
+ 564 0036 1946     		mov	r1, r3
+ 565 0038 0248     		ldr	r0, .L47
+ 566 003a 0068     		ldr	r0, [r0]
+ 567 003c 044C     		ldr	r4, .L47+12
+ 568              	.LVL34:
+ 569              		.loc 1 115 3 is_stmt 0 view .LVU88
+ 570 003e A047     		blx	r4
+ 571              	.LVL35:
+ 572              		.loc 1 117 1 view .LVU89
+ 573 0040 70BD     		pop	{r4, r5, r6, pc}
+ 574              	.LVL36:
+ 575              	.L44:
+ 576              	.LCFI17:
+ 577              		.cfi_def_cfa_offset 0
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 11
+
+
+ 578              		.cfi_restore 4
+ 579              		.cfi_restore 5
+ 580              		.cfi_restore 6
+ 581              		.cfi_restore 14
+ 582              		.loc 1 117 1 view .LVU90
+ 583 0042 7047     		bx	lr
+ 584              	.L48:
+ 585              		.align	2
+ 586              	.L47:
+ 587 0044 00000000 		.word	.LANCHOR4
+ 588 0048 00000000 		.word	xQueueSemaphoreTake
+ 589 004c 00000000 		.word	.LANCHOR1
+ 590 0050 00000000 		.word	xQueueGenericSend
+ 591 0054 00000000 		.word	strlen
+ 592              		.cfi_endproc
+ 593              	.LFE75:
+ 595              		.section	.text.UART_AsyncTransmitDecimal,"ax",%progbits
+ 596              		.align	1
+ 597              		.global	UART_AsyncTransmitDecimal
+ 598              		.syntax unified
+ 599              		.thumb
+ 600              		.thumb_func
+ 601              		.fpu softvfp
+ 603              	UART_AsyncTransmitDecimal:
+ 604              	.LVL37:
+ 605              	.LFB76:
+ 606              		.loc 1 120 1 is_stmt 1 view -0
+ 607              		.cfi_startproc
+ 608              		@ args = 0, pretend = 0, frame = 32
+ 609              		@ frame_needed = 0, uses_anonymous_args = 0
+ 610              		.loc 1 120 1 is_stmt 0 view .LVU92
+ 611 0000 30B5     		push	{r4, r5, lr}
+ 612              	.LCFI18:
+ 613              		.cfi_def_cfa_offset 12
+ 614              		.cfi_offset 4, -12
+ 615              		.cfi_offset 5, -8
+ 616              		.cfi_offset 14, -4
+ 617 0002 89B0     		sub	sp, sp, #36
+ 618              	.LCFI19:
+ 619              		.cfi_def_cfa_offset 48
+ 620 0004 0546     		mov	r5, r0
+ 621              		.loc 1 121 2 is_stmt 1 view .LVU93
+ 622 0006 4FF0FF31 		mov	r1, #-1
+ 623 000a 174B     		ldr	r3, .L55
+ 624 000c 1868     		ldr	r0, [r3]
+ 625              	.LVL38:
+ 626              		.loc 1 121 2 is_stmt 0 view .LVU94
+ 627 000e 174B     		ldr	r3, .L55+4
+ 628 0010 9847     		blx	r3
+ 629              	.LVL39:
+ 630              		.loc 1 123 2 is_stmt 1 view .LVU95
+ 631              		.loc 1 124 2 view .LVU96
+ 632              		.loc 1 125 2 view .LVU97
+ 633              		.loc 1 124 11 is_stmt 0 view .LVU98
+ 634 0012 2024     		movs	r4, #32
+ 635              		.loc 1 125 8 view .LVU99
+ 636 0014 0FE0     		b	.L50
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 12
+
+
+ 637              	.LVL40:
+ 638              	.L51:
+ 639              		.loc 1 127 3 is_stmt 1 view .LVU100
+ 640              		.loc 1 127 35 is_stmt 0 view .LVU101
+ 641 0016 164B     		ldr	r3, .L55+8
+ 642 0018 A3FB0523 		umull	r2, r3, r3, r5
+ 643 001c DB08     		lsrs	r3, r3, #3
+ 644 001e 1A46     		mov	r2, r3
+ 645 0020 03EB8303 		add	r3, r3, r3, lsl #2
+ 646 0024 A5EB4303 		sub	r3, r5, r3, lsl #1
+ 647              		.loc 1 127 19 view .LVU102
+ 648 0028 013C     		subs	r4, r4, #1
+ 649              	.LVL41:
+ 650              		.loc 1 127 25 view .LVU103
+ 651 002a 3033     		adds	r3, r3, #48
+ 652              		.loc 1 127 19 view .LVU104
+ 653 002c 08A9     		add	r1, sp, #32
+ 654 002e 2144     		add	r1, r1, r4
+ 655 0030 01F8203C 		strb	r3, [r1, #-32]
+ 656              		.loc 1 128 3 is_stmt 1 view .LVU105
+ 657              		.loc 1 128 11 is_stmt 0 view .LVU106
+ 658 0034 1546     		mov	r5, r2
+ 659              	.LVL42:
+ 660              	.L50:
+ 661              		.loc 1 125 8 is_stmt 1 view .LVU107
+ 662 0036 002D     		cmp	r5, #0
+ 663 0038 EDD1     		bne	.L51
+ 664 003a 09E0     		b	.L52
+ 665              	.LVL43:
+ 666              	.L53:
+ 667              	.LBB5:
+ 668              		.loc 1 133 3 discriminator 3 view .LVU108
+ 669 003c 0023     		movs	r3, #0
+ 670 003e 4FF0FF32 		mov	r2, #-1
+ 671 0042 0DEB0401 		add	r1, sp, r4
+ 672 0046 0B48     		ldr	r0, .L55+12
+ 673 0048 0068     		ldr	r0, [r0]
+ 674 004a 0B4D     		ldr	r5, .L55+16
+ 675 004c A847     		blx	r5
+ 676              	.LVL44:
+ 677              		.loc 1 131 35 discriminator 3 view .LVU109
+ 678              		.loc 1 131 36 is_stmt 0 discriminator 3 view .LVU110
+ 679 004e 0134     		adds	r4, r4, #1
+ 680              	.LVL45:
+ 681              	.L52:
+ 682              		.loc 1 131 27 is_stmt 1 discriminator 1 view .LVU111
+ 683              		.loc 1 131 2 is_stmt 0 discriminator 1 view .LVU112
+ 684 0050 1F2C     		cmp	r4, #31
+ 685 0052 F3D9     		bls	.L53
+ 686              	.LBE5:
+ 687              		.loc 1 136 2 is_stmt 1 view .LVU113
+ 688 0054 0023     		movs	r3, #0
+ 689 0056 1A46     		mov	r2, r3
+ 690 0058 1946     		mov	r1, r3
+ 691 005a 0348     		ldr	r0, .L55
+ 692 005c 0068     		ldr	r0, [r0]
+ 693 005e 064C     		ldr	r4, .L55+16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 13
+
+
+ 694              	.LVL46:
+ 695              		.loc 1 136 2 is_stmt 0 view .LVU114
+ 696 0060 A047     		blx	r4
+ 697              	.LVL47:
+ 698              		.loc 1 137 1 view .LVU115
+ 699 0062 09B0     		add	sp, sp, #36
+ 700              	.LCFI20:
+ 701              		.cfi_def_cfa_offset 12
+ 702              		@ sp needed
+ 703 0064 30BD     		pop	{r4, r5, pc}
+ 704              	.L56:
+ 705 0066 00BF     		.align	2
+ 706              	.L55:
+ 707 0068 00000000 		.word	.LANCHOR4
+ 708 006c 00000000 		.word	xQueueSemaphoreTake
+ 709 0070 CDCCCCCC 		.word	-858993459
+ 710 0074 00000000 		.word	.LANCHOR1
+ 711 0078 00000000 		.word	xQueueGenericSend
+ 712              		.cfi_endproc
+ 713              	.LFE76:
+ 715              		.section	.text.UART_BlockReceiveCharacter,"ax",%progbits
+ 716              		.align	1
+ 717              		.global	UART_BlockReceiveCharacter
+ 718              		.syntax unified
+ 719              		.thumb
+ 720              		.thumb_func
+ 721              		.fpu softvfp
+ 723              	UART_BlockReceiveCharacter:
+ 724              	.LFB77:
+ 725              		.loc 1 143 1 is_stmt 1 view -0
+ 726              		.cfi_startproc
+ 727              		@ args = 0, pretend = 0, frame = 8
+ 728              		@ frame_needed = 0, uses_anonymous_args = 0
+ 729 0000 10B5     		push	{r4, lr}
+ 730              	.LCFI21:
+ 731              		.cfi_def_cfa_offset 8
+ 732              		.cfi_offset 4, -8
+ 733              		.cfi_offset 14, -4
+ 734 0002 82B0     		sub	sp, sp, #8
+ 735              	.LCFI22:
+ 736              		.cfi_def_cfa_offset 16
+ 737              		.loc 1 144 2 view .LVU117
+ 738 0004 0B4C     		ldr	r4, .L59
+ 739 0006 4FF0FF31 		mov	r1, #-1
+ 740 000a 2068     		ldr	r0, [r4]
+ 741 000c 0A4B     		ldr	r3, .L59+4
+ 742 000e 9847     		blx	r3
+ 743              	.LVL48:
+ 744              		.loc 1 146 2 view .LVU118
+ 745              		.loc 1 147 2 view .LVU119
+ 746 0010 4FF0FF32 		mov	r2, #-1
+ 747 0014 0DF10701 		add	r1, sp, #7
+ 748 0018 084B     		ldr	r3, .L59+8
+ 749 001a 1868     		ldr	r0, [r3]
+ 750 001c 084B     		ldr	r3, .L59+12
+ 751 001e 9847     		blx	r3
+ 752              	.LVL49:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 14
+
+
+ 753              		.loc 1 149 2 view .LVU120
+ 754 0020 0023     		movs	r3, #0
+ 755 0022 1A46     		mov	r2, r3
+ 756 0024 1946     		mov	r1, r3
+ 757 0026 2068     		ldr	r0, [r4]
+ 758 0028 064C     		ldr	r4, .L59+16
+ 759 002a A047     		blx	r4
+ 760              	.LVL50:
+ 761              		.loc 1 151 2 view .LVU121
+ 762              		.loc 1 152 1 is_stmt 0 view .LVU122
+ 763 002c 9DF80700 		ldrb	r0, [sp, #7]	@ zero_extendqisi2
+ 764 0030 02B0     		add	sp, sp, #8
+ 765              	.LCFI23:
+ 766              		.cfi_def_cfa_offset 8
+ 767              		@ sp needed
+ 768 0032 10BD     		pop	{r4, pc}
+ 769              	.L60:
+ 770              		.align	2
+ 771              	.L59:
+ 772 0034 00000000 		.word	.LANCHOR5
+ 773 0038 00000000 		.word	xQueueSemaphoreTake
+ 774 003c 00000000 		.word	.LANCHOR0
+ 775 0040 00000000 		.word	xQueueReceive
+ 776 0044 00000000 		.word	xQueueGenericSend
+ 777              		.cfi_endproc
+ 778              	.LFE77:
+ 780              		.section	.text.UART_BlockReceiveString,"ax",%progbits
+ 781              		.align	1
+ 782              		.global	UART_BlockReceiveString
+ 783              		.syntax unified
+ 784              		.thumb
+ 785              		.thumb_func
+ 786              		.fpu softvfp
+ 788              	UART_BlockReceiveString:
+ 789              	.LFB78:
+ 790              		.loc 1 155 1 is_stmt 1 view -0
+ 791              		.cfi_startproc
+ 792              		@ args = 0, pretend = 0, frame = 8
+ 793              		@ frame_needed = 0, uses_anonymous_args = 0
+ 794 0000 30B5     		push	{r4, r5, lr}
+ 795              	.LCFI24:
+ 796              		.cfi_def_cfa_offset 12
+ 797              		.cfi_offset 4, -12
+ 798              		.cfi_offset 5, -8
+ 799              		.cfi_offset 14, -4
+ 800 0002 83B0     		sub	sp, sp, #12
+ 801              	.LCFI25:
+ 802              		.cfi_def_cfa_offset 24
+ 803              		.loc 1 156 2 view .LVU124
+ 804 0004 4FF0FF31 		mov	r1, #-1
+ 805 0008 154B     		ldr	r3, .L67
+ 806 000a 1868     		ldr	r0, [r3]
+ 807 000c 154B     		ldr	r3, .L67+4
+ 808 000e 9847     		blx	r3
+ 809              	.LVL51:
+ 810              		.loc 1 158 2 view .LVU125
+ 811              		.loc 1 158 17 is_stmt 0 view .LVU126
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 15
+
+
+ 812 0010 4020     		movs	r0, #64
+ 813 0012 154B     		ldr	r3, .L67+8
+ 814 0014 9847     		blx	r3
+ 815              	.LVL52:
+ 816              		.loc 1 160 2 is_stmt 1 view .LVU127
+ 817              		.loc 1 160 5 is_stmt 0 view .LVU128
+ 818 0016 0546     		mov	r5, r0
+ 819 0018 C0B1     		cbz	r0, .L62
+ 820              	.LBB6:
+ 821              		.loc 1 162 3 is_stmt 1 view .LVU129
+ 822              	.LVL53:
+ 823              		.loc 1 164 3 view .LVU130
+ 824              		.loc 1 164 8 is_stmt 0 view .LVU131
+ 825 001a 0024     		movs	r4, #0
+ 826 001c 8DF80740 		strb	r4, [sp, #7]
+ 827              		.loc 1 165 3 is_stmt 1 view .LVU132
+ 828              		.loc 1 165 9 is_stmt 0 view .LVU133
+ 829 0020 0BE0     		b	.L63
+ 830              	.LVL54:
+ 831              	.L65:
+ 832              		.loc 1 167 4 is_stmt 1 view .LVU134
+ 833 0022 4FF0FF32 		mov	r2, #-1
+ 834 0026 0DF10701 		add	r1, sp, #7
+ 835 002a 104B     		ldr	r3, .L67+12
+ 836 002c 1868     		ldr	r0, [r3]
+ 837 002e 104B     		ldr	r3, .L67+16
+ 838 0030 9847     		blx	r3
+ 839              	.LVL55:
+ 840              		.loc 1 168 4 view .LVU135
+ 841              		.loc 1 168 20 is_stmt 0 view .LVU136
+ 842 0032 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 843 0036 2B55     		strb	r3, [r5, r4]
+ 844              		.loc 1 168 16 view .LVU137
+ 845 0038 0134     		adds	r4, r4, #1
+ 846              	.LVL56:
+ 847              	.L63:
+ 848              		.loc 1 165 9 is_stmt 1 view .LVU138
+ 849              		.loc 1 165 20 is_stmt 0 view .LVU139
+ 850 003a 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 851              		.loc 1 165 9 view .LVU140
+ 852 003e 0D2B     		cmp	r3, #13
+ 853 0040 01D0     		beq	.L64
+ 854              		.loc 1 165 28 discriminator 1 view .LVU141
+ 855 0042 3F2C     		cmp	r4, #63
+ 856 0044 EDD9     		bls	.L65
+ 857              	.L64:
+ 858              		.loc 1 171 3 is_stmt 1 view .LVU142
+ 859              		.loc 1 171 19 is_stmt 0 view .LVU143
+ 860 0046 013C     		subs	r4, r4, #1
+ 861              	.LVL57:
+ 862              		.loc 1 171 19 view .LVU144
+ 863 0048 0023     		movs	r3, #0
+ 864 004a 2B55     		strb	r3, [r5, r4]
+ 865              	.LVL58:
+ 866              	.L62:
+ 867              		.loc 1 171 19 view .LVU145
+ 868              	.LBE6:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 16
+
+
+ 869              		.loc 1 174 2 is_stmt 1 view .LVU146
+ 870 004c 0023     		movs	r3, #0
+ 871 004e 1A46     		mov	r2, r3
+ 872 0050 1946     		mov	r1, r3
+ 873 0052 0348     		ldr	r0, .L67
+ 874 0054 0068     		ldr	r0, [r0]
+ 875 0056 074C     		ldr	r4, .L67+20
+ 876 0058 A047     		blx	r4
+ 877              	.LVL59:
+ 878              		.loc 1 176 2 view .LVU147
+ 879              		.loc 1 177 1 is_stmt 0 view .LVU148
+ 880 005a 2846     		mov	r0, r5
+ 881 005c 03B0     		add	sp, sp, #12
+ 882              	.LCFI26:
+ 883              		.cfi_def_cfa_offset 12
+ 884              		@ sp needed
+ 885 005e 30BD     		pop	{r4, r5, pc}
+ 886              	.LVL60:
+ 887              	.L68:
+ 888              		.loc 1 177 1 view .LVU149
+ 889              		.align	2
+ 890              	.L67:
+ 891 0060 00000000 		.word	.LANCHOR5
+ 892 0064 00000000 		.word	xQueueSemaphoreTake
+ 893 0068 00000000 		.word	pvPortMalloc
+ 894 006c 00000000 		.word	.LANCHOR0
+ 895 0070 00000000 		.word	xQueueReceive
+ 896 0074 00000000 		.word	xQueueGenericSend
+ 897              		.cfi_endproc
+ 898              	.LFE78:
+ 900              		.section	.text.UART_BlockReceiveDecimal,"ax",%progbits
+ 901              		.align	1
+ 902              		.global	UART_BlockReceiveDecimal
+ 903              		.syntax unified
+ 904              		.thumb
+ 905              		.thumb_func
+ 906              		.fpu softvfp
+ 908              	UART_BlockReceiveDecimal:
+ 909              	.LFB79:
+ 910              		.loc 1 180 1 is_stmt 1 view -0
+ 911              		.cfi_startproc
+ 912              		@ args = 0, pretend = 0, frame = 8
+ 913              		@ frame_needed = 0, uses_anonymous_args = 0
+ 914 0000 30B5     		push	{r4, r5, lr}
+ 915              	.LCFI27:
+ 916              		.cfi_def_cfa_offset 12
+ 917              		.cfi_offset 4, -12
+ 918              		.cfi_offset 5, -8
+ 919              		.cfi_offset 14, -4
+ 920 0002 83B0     		sub	sp, sp, #12
+ 921              	.LCFI28:
+ 922              		.cfi_def_cfa_offset 24
+ 923              		.loc 1 181 2 view .LVU151
+ 924 0004 4FF0FF31 		mov	r1, #-1
+ 925 0008 154B     		ldr	r3, .L75
+ 926 000a 1868     		ldr	r0, [r3]
+ 927 000c 154B     		ldr	r3, .L75+4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 17
+
+
+ 928 000e 9847     		blx	r3
+ 929              	.LVL61:
+ 930              		.loc 1 183 2 view .LVU152
+ 931              		.loc 1 185 2 view .LVU153
+ 932              		.loc 1 185 7 is_stmt 0 view .LVU154
+ 933 0010 0024     		movs	r4, #0
+ 934 0012 8DF80740 		strb	r4, [sp, #7]
+ 935              		.loc 1 186 2 is_stmt 1 view .LVU155
+ 936              	.LVL62:
+ 937              	.L70:
+ 938              		.loc 1 186 8 view .LVU156
+ 939              		.loc 1 186 19 is_stmt 0 view .LVU157
+ 940 0016 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 941              		.loc 1 186 8 view .LVU158
+ 942 001a 0D2B     		cmp	r3, #13
+ 943 001c 15D0     		beq	.L74
+ 944              		.loc 1 188 3 is_stmt 1 view .LVU159
+ 945 001e 4FF0FF32 		mov	r2, #-1
+ 946 0022 0DF10701 		add	r1, sp, #7
+ 947 0026 104B     		ldr	r3, .L75+8
+ 948 0028 1868     		ldr	r0, [r3]
+ 949 002a 104B     		ldr	r3, .L75+12
+ 950 002c 9847     		blx	r3
+ 951              	.LVL63:
+ 952              		.loc 1 189 3 view .LVU160
+ 953              		.loc 1 189 24 is_stmt 0 view .LVU161
+ 954 002e 9DF80720 		ldrb	r2, [sp, #7]	@ zero_extendqisi2
+ 955 0032 A2F13003 		sub	r3, r2, #48
+ 956 0036 DBB2     		uxtb	r3, r3
+ 957              		.loc 1 189 6 view .LVU162
+ 958 0038 092B     		cmp	r3, #9
+ 959 003a ECD8     		bhi	.L70
+ 960              		.loc 1 191 4 is_stmt 1 view .LVU163
+ 961              		.loc 1 191 22 is_stmt 0 view .LVU164
+ 962 003c 04EB8404 		add	r4, r4, r4, lsl #2
+ 963              	.LVL64:
+ 964              		.loc 1 191 22 view .LVU165
+ 965 0040 6300     		lsls	r3, r4, #1
+ 966              		.loc 1 191 27 view .LVU166
+ 967 0042 1A44     		add	r2, r2, r3
+ 968              		.loc 1 191 12 view .LVU167
+ 969 0044 A2F13004 		sub	r4, r2, #48
+ 970              	.LVL65:
+ 971              		.loc 1 191 12 view .LVU168
+ 972 0048 E5E7     		b	.L70
+ 973              	.L74:
+ 974              		.loc 1 195 2 is_stmt 1 view .LVU169
+ 975 004a 0023     		movs	r3, #0
+ 976 004c 1A46     		mov	r2, r3
+ 977 004e 1946     		mov	r1, r3
+ 978 0050 0348     		ldr	r0, .L75
+ 979 0052 0068     		ldr	r0, [r0]
+ 980 0054 064D     		ldr	r5, .L75+16
+ 981 0056 A847     		blx	r5
+ 982              	.LVL66:
+ 983              		.loc 1 197 2 view .LVU170
+ 984              		.loc 1 198 1 is_stmt 0 view .LVU171
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 18
+
+
+ 985 0058 2046     		mov	r0, r4
+ 986 005a 03B0     		add	sp, sp, #12
+ 987              	.LCFI29:
+ 988              		.cfi_def_cfa_offset 12
+ 989              		@ sp needed
+ 990 005c 30BD     		pop	{r4, r5, pc}
+ 991              	.LVL67:
+ 992              	.L76:
+ 993              		.loc 1 198 1 view .LVU172
+ 994 005e 00BF     		.align	2
+ 995              	.L75:
+ 996 0060 00000000 		.word	.LANCHOR5
+ 997 0064 00000000 		.word	xQueueSemaphoreTake
+ 998 0068 00000000 		.word	.LANCHOR0
+ 999 006c 00000000 		.word	xQueueReceive
+ 1000 0070 00000000 		.word	xQueueGenericSend
+ 1001              		.cfi_endproc
+ 1002              	.LFE79:
+ 1004              		.section	.bss.UART_ReceiveMutexHandle,"aw",%nobits
+ 1005              		.align	2
+ 1006              		.set	.LANCHOR5,. + 0
+ 1009              	UART_ReceiveMutexHandle:
+ 1010 0000 00000000 		.space	4
+ 1011              		.section	.bss.UART_ReceiveQueueHandle,"aw",%nobits
+ 1012              		.align	2
+ 1013              		.set	.LANCHOR0,. + 0
+ 1016              	UART_ReceiveQueueHandle:
+ 1017 0000 00000000 		.space	4
+ 1018              		.section	.bss.UART_ReceiveTaskHandle,"aw",%nobits
+ 1019              		.align	2
+ 1020              		.set	.LANCHOR3,. + 0
+ 1023              	UART_ReceiveTaskHandle:
+ 1024 0000 00000000 		.space	4
+ 1025              		.section	.bss.UART_TransmitMutexHandle,"aw",%nobits
+ 1026              		.align	2
+ 1027              		.set	.LANCHOR4,. + 0
+ 1030              	UART_TransmitMutexHandle:
+ 1031 0000 00000000 		.space	4
+ 1032              		.section	.bss.UART_TransmitQueueHandle,"aw",%nobits
+ 1033              		.align	2
+ 1034              		.set	.LANCHOR1,. + 0
+ 1037              	UART_TransmitQueueHandle:
+ 1038 0000 00000000 		.space	4
+ 1039              		.section	.bss.UART_TransmitTaskHandle,"aw",%nobits
+ 1040              		.align	2
+ 1041              		.set	.LANCHOR2,. + 0
+ 1044              	UART_TransmitTaskHandle:
+ 1045 0000 00000000 		.space	4
+ 1046              		.text
+ 1047              	.Letext0:
+ 1048              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 1049              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 1050              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 1051              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 1052              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 1053              		.file 7 "../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"
+ 1054              		.file 8 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 19
+
+
+ 1055              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 1056              		.file 10 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 1057              		.file 11 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 1058              		.file 12 "../Core/Inc/usart.h"
+ 1059              		.file 13 "../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h"
+ 1060              		.file 14 "../<built-in>"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_uart.c
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:16     .text.UART_ReceiveTask:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:23     .text.UART_ReceiveTask:0000000000000000 UART_ReceiveTask
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:71     .text.UART_ReceiveTask:0000000000000030 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:80     .text.UART_TransmitTask:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:86     .text.UART_TransmitTask:0000000000000000 UART_TransmitTask
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:132    .text.UART_TransmitTask:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:141    .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:148    .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:218    .text.HAL_UART_TxCpltCallback:000000000000003c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:225    .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:232    .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:302    .text.HAL_UART_RxCpltCallback:000000000000003c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:309    .rodata.UART_Init.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:316    .text.UART_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:323    .text.UART_Init:0000000000000000 UART_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:409    .text.UART_Init:000000000000005c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:426    .text.UART_AsyncTransmitCharacter:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:433    .text.UART_AsyncTransmitCharacter:0000000000000000 UART_AsyncTransmitCharacter
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:485    .text.UART_AsyncTransmitCharacter:0000000000000034 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:493    .text.UART_AsyncTransmitString:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:500    .text.UART_AsyncTransmitString:0000000000000000 UART_AsyncTransmitString
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:587    .text.UART_AsyncTransmitString:0000000000000044 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:596    .text.UART_AsyncTransmitDecimal:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:603    .text.UART_AsyncTransmitDecimal:0000000000000000 UART_AsyncTransmitDecimal
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:707    .text.UART_AsyncTransmitDecimal:0000000000000068 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:716    .text.UART_BlockReceiveCharacter:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:723    .text.UART_BlockReceiveCharacter:0000000000000000 UART_BlockReceiveCharacter
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:772    .text.UART_BlockReceiveCharacter:0000000000000034 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:781    .text.UART_BlockReceiveString:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:788    .text.UART_BlockReceiveString:0000000000000000 UART_BlockReceiveString
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:891    .text.UART_BlockReceiveString:0000000000000060 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:901    .text.UART_BlockReceiveDecimal:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:908    .text.UART_BlockReceiveDecimal:0000000000000000 UART_BlockReceiveDecimal
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:996    .text.UART_BlockReceiveDecimal:0000000000000060 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1005   .bss.UART_ReceiveMutexHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1009   .bss.UART_ReceiveMutexHandle:0000000000000000 UART_ReceiveMutexHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1012   .bss.UART_ReceiveQueueHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1016   .bss.UART_ReceiveQueueHandle:0000000000000000 UART_ReceiveQueueHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1019   .bss.UART_ReceiveTaskHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1023   .bss.UART_ReceiveTaskHandle:0000000000000000 UART_ReceiveTaskHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1026   .bss.UART_TransmitMutexHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1030   .bss.UART_TransmitMutexHandle:0000000000000000 UART_TransmitMutexHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1033   .bss.UART_TransmitQueueHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1037   .bss.UART_TransmitQueueHandle:0000000000000000 UART_TransmitQueueHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1040   .bss.UART_TransmitTaskHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s:1044   .bss.UART_TransmitTaskHandle:0000000000000000 UART_TransmitTaskHandle
+
+UNDEFINED SYMBOLS
+huart1
+HAL_UART_Receive_IT
+ulTaskNotifyTake
+xQueueGenericSend
+xQueueReceive
+HAL_UART_Transmit_IT
+vTaskNotifyGiveFromISR
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccjRweia.s 			page 21
+
+
+xTaskCreate
+xQueueGenericCreate
+xQueueCreateMutex
+xQueueSemaphoreTake
+strlen
+pvPortMalloc

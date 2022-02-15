@@ -1,0 +1,1216 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"homework.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.timerTogglerCallback,"ax",%progbits
+  16              		.align	1
+  17              		.global	timerTogglerCallback
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	timerTogglerCallback:
+  25              	.LVL0:
+  26              	.LFB70:
+  27              		.file 1 "../Core/Src/homework.c"
+   1:../Core/Src/homework.c **** 
+  28              		.loc 1 223 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 223 1 is_stmt 0 view .LVU1
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  38              		.loc 1 224 2 is_stmt 1 view .LVU2
+  39              		.loc 1 224 15 is_stmt 0 view .LVU3
+  40 0002 094B     		ldr	r3, .L7
+  41 0004 1B68     		ldr	r3, [r3]
+  42              		.loc 1 224 4 view .LVU4
+  43 0006 132B     		cmp	r3, #19
+  44 0008 04D8     		bhi	.L5
+  45              	.LVL1:
+  46              	.L2:
+  47              		.loc 1 228 2 is_stmt 1 view .LVU5
+  48              		.loc 1 228 15 is_stmt 0 view .LVU6
+  49 000a 074B     		ldr	r3, .L7
+  50 000c 1B68     		ldr	r3, [r3]
+  51              		.loc 1 228 4 view .LVU7
+  52 000e 232B     		cmp	r3, #35
+  53 0010 05D9     		bls	.L6
+  54              	.L1:
+  55              		.loc 1 232 1 view .LVU8
+  56 0012 08BD     		pop	{r3, pc}
+  57              	.LVL2:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 2
+
+
+  58              	.L5:
+  59              		.loc 1 226 3 is_stmt 1 view .LVU9
+  60 0014 1021     		movs	r1, #16
+  61 0016 0548     		ldr	r0, .L7+4
+  62              	.LVL3:
+  63              		.loc 1 226 3 is_stmt 0 view .LVU10
+  64 0018 054B     		ldr	r3, .L7+8
+  65 001a 9847     		blx	r3
+  66              	.LVL4:
+  67 001c F5E7     		b	.L2
+  68              	.L6:
+  69              		.loc 1 230 3 is_stmt 1 view .LVU11
+  70 001e 1021     		movs	r1, #16
+  71 0020 0248     		ldr	r0, .L7+4
+  72 0022 034B     		ldr	r3, .L7+8
+  73 0024 9847     		blx	r3
+  74              	.LVL5:
+  75              		.loc 1 232 1 is_stmt 0 view .LVU12
+  76 0026 F4E7     		b	.L1
+  77              	.L8:
+  78              		.align	2
+  79              	.L7:
+  80 0028 00000000 		.word	.LANCHOR0
+  81 002c 00080140 		.word	1073809408
+  82 0030 00000000 		.word	HAL_GPIO_TogglePin
+  83              		.cfi_endproc
+  84              	.LFE70:
+  86              		.section	.rodata.homeworkTask.str1.4,"aMS",%progbits,1
+  87              		.align	2
+  88              	.LC1:
+  89 0000 42726F6A 		.ascii	"Broj podeoka: \000"
+  89      20706F64 
+  89      656F6B61 
+  89      3A2000
+  90              		.global	__aeabi_f2uiz
+  91 000f 00       		.align	2
+  92              	.LC3:
+  93 0010 4C454445 		.ascii	"LEDENO JE\000"
+  93      4E4F204A 
+  93      4500
+  94 001a 0000     		.align	2
+  95              	.LC4:
+  96 001c 544F5049 		.ascii	"TOPIM SE\000"
+  96      4D205345 
+  96      00
+  97              		.section	.text.homeworkTask,"ax",%progbits
+  98              		.align	1
+  99              		.syntax unified
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.fpu softvfp
+ 104              	homeworkTask:
+ 105              	.LVL6:
+ 106              	.LFB69:
+ 107              		.loc 1 34 1 is_stmt 1 view -0
+ 108              		.cfi_startproc
+ 109              		@ args = 0, pretend = 0, frame = 40
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 3
+
+
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111              		.loc 1 34 1 is_stmt 0 view .LVU14
+ 112 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 113              	.LCFI1:
+ 114              		.cfi_def_cfa_offset 24
+ 115              		.cfi_offset 4, -24
+ 116              		.cfi_offset 5, -20
+ 117              		.cfi_offset 6, -16
+ 118              		.cfi_offset 7, -12
+ 119              		.cfi_offset 8, -8
+ 120              		.cfi_offset 14, -4
+ 121 0004 8AB0     		sub	sp, sp, #40
+ 122              	.LCFI2:
+ 123              		.cfi_def_cfa_offset 64
+ 124              		.loc 1 35 2 is_stmt 1 view .LVU15
+ 125              		.loc 1 35 7 is_stmt 0 view .LVU16
+ 126 0006 A04C     		ldr	r4, .L48
+ 127 0008 06AD     		add	r5, sp, #24
+ 128 000a 94E80F00 		ldm	r4, {r0, r1, r2, r3}
+ 129              	.LVL7:
+ 130              		.loc 1 35 7 view .LVU17
+ 131 000e 07C5     		stmia	r5!, {r0, r1, r2}
+ 132 0010 25F8023B 		strh	r3, [r5], #2	@ movhi
+ 133 0014 1B0C     		lsrs	r3, r3, #16
+ 134 0016 2B70     		strb	r3, [r5]
+ 135 0018 0027     		movs	r7, #0
+ 136 001a 8DF82770 		strb	r7, [sp, #39]
+ 137              		.loc 1 36 2 is_stmt 1 view .LVU18
+ 138 001e 06A8     		add	r0, sp, #24
+ 139 0020 9A4E     		ldr	r6, .L48+4
+ 140 0022 B047     		blx	r6
+ 141              	.LVL8:
+ 142              		.loc 1 37 2 view .LVU19
+ 143              		.loc 1 37 25 is_stmt 0 view .LVU20
+ 144 0024 9A4B     		ldr	r3, .L48+8
+ 145 0026 9847     		blx	r3
+ 146              	.LVL9:
+ 147 0028 0546     		mov	r5, r0
+ 148              	.LVL10:
+ 149              		.loc 1 38 2 is_stmt 1 view .LVU21
+ 150 002a 0D20     		movs	r0, #13
+ 151 002c DFF86482 		ldr	r8, .L48+12
+ 152 0030 C047     		blx	r8
+ 153              	.LVL11:
+ 154              		.loc 1 39 2 view .LVU22
+ 155 0032 9948     		ldr	r0, .L48+16
+ 156 0034 B047     		blx	r6
+ 157              	.LVL12:
+ 158              		.loc 1 40 2 view .LVU23
+ 159              		.loc 1 41 2 view .LVU24
+ 160 0036 EDB2     		uxtb	r5, r5
+ 161              		.loc 1 41 2 is_stmt 0 view .LVU25
+ 162 0038 0A22     		movs	r2, #10
+ 163 003a 05A9     		add	r1, sp, #20
+ 164 003c 2846     		mov	r0, r5
+ 165 003e 974B     		ldr	r3, .L48+20
+ 166 0040 9847     		blx	r3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 4
+
+
+ 167              	.LVL13:
+ 168              		.loc 1 42 2 is_stmt 1 view .LVU26
+ 169 0042 05A8     		add	r0, sp, #20
+ 170 0044 B047     		blx	r6
+ 171              	.LVL14:
+ 172              		.loc 1 43 2 view .LVU27
+ 173 0046 0D20     		movs	r0, #13
+ 174 0048 C047     		blx	r8
+ 175              	.LVL15:
+ 176              		.loc 1 44 2 view .LVU28
+ 177 004a 2846     		mov	r0, r5
+ 178 004c 944B     		ldr	r3, .L48+24
+ 179 004e 9847     		blx	r3
+ 180              	.LVL16:
+ 181              		.loc 1 45 2 view .LVU29
+ 182              		.loc 1 45 7 is_stmt 0 view .LVU30
+ 183 0050 01AE     		add	r6, sp, #4
+ 184 0052 1034     		adds	r4, r4, #16
+ 185 0054 94E80F00 		ldm	r4, {r0, r1, r2, r3}
+ 186 0058 07C6     		stmia	r6!, {r0, r1, r2}
+ 187 005a 3380     		strh	r3, [r6]	@ movhi
+ 188 005c ADF81270 		strh	r7, [sp, #18]	@ movhi
+ 189              		.loc 1 46 2 is_stmt 1 view .LVU31
+ 190              		.loc 1 46 19 is_stmt 0 view .LVU32
+ 191 0060 904B     		ldr	r3, .L48+28
+ 192 0062 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 193              		.loc 1 46 5 view .LVU33
+ 194 0064 23B1     		cbz	r3, .L42
+ 195              	.L10:
+ 196              		.loc 1 56 2 is_stmt 1 view .LVU34
+ 197 0066 8D21     		movs	r1, #141
+ 198 0068 0020     		movs	r0, #0
+ 199 006a 8F4B     		ldr	r3, .L48+32
+ 200 006c 9847     		blx	r3
+ 201              	.LVL17:
+ 202 006e C5E0     		b	.L13
+ 203              	.L42:
+ 204              		.loc 1 48 3 view .LVU35
+ 205 0070 8021     		movs	r1, #128
+ 206 0072 3846     		mov	r0, r7
+ 207 0074 8C4B     		ldr	r3, .L48+32
+ 208 0076 9847     		blx	r3
+ 209              	.LVL18:
+ 210              		.loc 1 50 3 view .LVU36
+ 211              	.LBB2:
+ 212              		.loc 1 50 8 view .LVU37
+ 213              		.loc 1 50 17 is_stmt 0 view .LVU38
+ 214 0078 3C46     		mov	r4, r7
+ 215              		.loc 1 50 3 view .LVU39
+ 216 007a 0BE0     		b	.L11
+ 217              	.LVL19:
+ 218              	.L12:
+ 219              		.loc 1 52 4 is_stmt 1 discriminator 3 view .LVU40
+ 220              		.loc 1 52 40 is_stmt 0 discriminator 3 view .LVU41
+ 221 007c 0AAB     		add	r3, sp, #40
+ 222 007e 2344     		add	r3, r3, r4
+ 223 0080 13F8246C 		ldrb	r6, [r3, #-36]	@ zero_extendqisi2
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 5
+
+
+ 224              		.loc 1 52 4 discriminator 3 view .LVU42
+ 225 0084 3146     		mov	r1, r6
+ 226 0086 0120     		movs	r0, #1
+ 227 0088 874B     		ldr	r3, .L48+32
+ 228 008a 9847     		blx	r3
+ 229              	.LVL20:
+ 230              		.loc 1 53 4 is_stmt 1 discriminator 3 view .LVU43
+ 231 008c 3046     		mov	r0, r6
+ 232 008e 814B     		ldr	r3, .L48+12
+ 233 0090 9847     		blx	r3
+ 234              	.LVL21:
+ 235              		.loc 1 50 32 discriminator 3 view .LVU44
+ 236              		.loc 1 50 33 is_stmt 0 discriminator 3 view .LVU45
+ 237 0092 0134     		adds	r4, r4, #1
+ 238              	.LVL22:
+ 239              	.L11:
+ 240              		.loc 1 50 24 is_stmt 1 discriminator 1 view .LVU46
+ 241              		.loc 1 50 3 is_stmt 0 discriminator 1 view .LVU47
+ 242 0094 0F2C     		cmp	r4, #15
+ 243 0096 F1D9     		bls	.L12
+ 244 0098 E5E7     		b	.L10
+ 245              	.LVL23:
+ 246              	.L15:
+ 247              		.loc 1 50 3 discriminator 1 view .LVU48
+ 248              	.LBE2:
+ 249              	.LBB3:
+ 250              		.loc 1 90 5 is_stmt 1 view .LVU49
+ 251              		.loc 1 91 5 view .LVU50
+ 252 009a 844E     		ldr	r6, .L48+36
+ 253 009c 0122     		movs	r2, #1
+ 254 009e 0221     		movs	r1, #2
+ 255 00a0 3046     		mov	r0, r6
+ 256 00a2 834C     		ldr	r4, .L48+40
+ 257 00a4 A047     		blx	r4
+ 258              	.LVL24:
+ 259              		.loc 1 92 5 view .LVU51
+ 260 00a6 0022     		movs	r2, #0
+ 261 00a8 0421     		movs	r1, #4
+ 262 00aa 3046     		mov	r0, r6
+ 263 00ac A047     		blx	r4
+ 264              	.LVL25:
+ 265              		.loc 1 93 5 view .LVU52
+ 266 00ae 0022     		movs	r2, #0
+ 267 00b0 0821     		movs	r1, #8
+ 268 00b2 3046     		mov	r0, r6
+ 269 00b4 A047     		blx	r4
+ 270              	.LVL26:
+ 271 00b6 DBE0     		b	.L16
+ 272              	.L14:
+ 273              		.loc 1 97 8 view .LVU53
+ 274              		.loc 1 97 11 is_stmt 0 view .LVU54
+ 275 00b8 222B     		cmp	r3, #34
+ 276 00ba 29D9     		bls	.L43
+ 277              		.loc 1 107 4 is_stmt 1 view .LVU55
+ 278              		.loc 1 107 7 is_stmt 0 view .LVU56
+ 279 00bc 282B     		cmp	r3, #40
+ 280 00be 39D9     		bls	.L18
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 6
+
+
+ 281              		.loc 1 109 5 is_stmt 1 view .LVU57
+ 282              		.loc 1 109 18 is_stmt 0 view .LVU58
+ 283 00c0 0127     		movs	r7, #1
+ 284 00c2 784B     		ldr	r3, .L48+28
+ 285 00c4 1F70     		strb	r7, [r3]
+ 286              		.loc 1 110 5 is_stmt 1 view .LVU59
+ 287 00c6 794E     		ldr	r6, .L48+36
+ 288 00c8 0022     		movs	r2, #0
+ 289 00ca 0221     		movs	r1, #2
+ 290 00cc 3046     		mov	r0, r6
+ 291 00ce 784C     		ldr	r4, .L48+40
+ 292 00d0 A047     		blx	r4
+ 293              	.LVL27:
+ 294              		.loc 1 111 5 view .LVU60
+ 295 00d2 0022     		movs	r2, #0
+ 296 00d4 0421     		movs	r1, #4
+ 297 00d6 3046     		mov	r0, r6
+ 298 00d8 A047     		blx	r4
+ 299              	.LVL28:
+ 300              		.loc 1 112 5 view .LVU61
+ 301 00da 3A46     		mov	r2, r7
+ 302 00dc 0821     		movs	r1, #8
+ 303 00de 3046     		mov	r0, r6
+ 304 00e0 A047     		blx	r4
+ 305              	.LVL29:
+ 306              		.loc 1 113 5 view .LVU62
+ 307 00e2 7448     		ldr	r0, .L48+44
+ 308 00e4 694B     		ldr	r3, .L48+4
+ 309 00e6 9847     		blx	r3
+ 310              	.LVL30:
+ 311              		.loc 1 114 5 view .LVU63
+ 312              		.loc 1 114 14 is_stmt 0 view .LVU64
+ 313 00e8 734B     		ldr	r3, .L48+48
+ 314 00ea 5422     		movs	r2, #84
+ 315 00ec 1A70     		strb	r2, [r3]
+ 316              		.loc 1 115 5 is_stmt 1 view .LVU65
+ 317              		.loc 1 115 14 is_stmt 0 view .LVU66
+ 318 00ee 4F22     		movs	r2, #79
+ 319 00f0 5A70     		strb	r2, [r3, #1]
+ 320              		.loc 1 116 5 is_stmt 1 view .LVU67
+ 321              		.loc 1 116 14 is_stmt 0 view .LVU68
+ 322 00f2 5022     		movs	r2, #80
+ 323 00f4 9A70     		strb	r2, [r3, #2]
+ 324              		.loc 1 117 5 is_stmt 1 view .LVU69
+ 325              		.loc 1 117 14 is_stmt 0 view .LVU70
+ 326 00f6 4922     		movs	r2, #73
+ 327 00f8 DA70     		strb	r2, [r3, #3]
+ 328              		.loc 1 118 5 is_stmt 1 view .LVU71
+ 329              		.loc 1 118 14 is_stmt 0 view .LVU72
+ 330 00fa 4D22     		movs	r2, #77
+ 331 00fc 1A71     		strb	r2, [r3, #4]
+ 332              		.loc 1 119 5 is_stmt 1 view .LVU73
+ 333              		.loc 1 119 14 is_stmt 0 view .LVU74
+ 334 00fe 2022     		movs	r2, #32
+ 335 0100 5A71     		strb	r2, [r3, #5]
+ 336              		.loc 1 120 5 is_stmt 1 view .LVU75
+ 337              		.loc 1 120 14 is_stmt 0 view .LVU76
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 7
+
+
+ 338 0102 5322     		movs	r2, #83
+ 339 0104 9A71     		strb	r2, [r3, #6]
+ 340              		.loc 1 121 5 is_stmt 1 view .LVU77
+ 341              		.loc 1 121 14 is_stmt 0 view .LVU78
+ 342 0106 4522     		movs	r2, #69
+ 343 0108 DA71     		strb	r2, [r3, #7]
+ 344              		.loc 1 122 5 is_stmt 1 view .LVU79
+ 345              		.loc 1 122 14 is_stmt 0 view .LVU80
+ 346 010a 0022     		movs	r2, #0
+ 347 010c 1A72     		strb	r2, [r3, #8]
+ 348 010e AFE0     		b	.L16
+ 349              	.L43:
+ 350              		.loc 1 99 4 is_stmt 1 view .LVU81
+ 351              		.loc 1 99 17 is_stmt 0 view .LVU82
+ 352 0110 0027     		movs	r7, #0
+ 353 0112 644B     		ldr	r3, .L48+28
+ 354 0114 1F70     		strb	r7, [r3]
+ 355              		.loc 1 100 4 is_stmt 1 view .LVU83
+ 356 0116 654E     		ldr	r6, .L48+36
+ 357 0118 0122     		movs	r2, #1
+ 358 011a 0221     		movs	r1, #2
+ 359 011c 3046     		mov	r0, r6
+ 360 011e 644C     		ldr	r4, .L48+40
+ 361 0120 A047     		blx	r4
+ 362              	.LVL31:
+ 363              		.loc 1 101 4 view .LVU84
+ 364 0122 3A46     		mov	r2, r7
+ 365 0124 0421     		movs	r1, #4
+ 366 0126 3046     		mov	r0, r6
+ 367 0128 A047     		blx	r4
+ 368              	.LVL32:
+ 369              		.loc 1 102 4 view .LVU85
+ 370 012a 3A46     		mov	r2, r7
+ 371 012c 0821     		movs	r1, #8
+ 372 012e 3046     		mov	r0, r6
+ 373 0130 A047     		blx	r4
+ 374              	.LVL33:
+ 375 0132 9DE0     		b	.L16
+ 376              	.L18:
+ 377              		.loc 1 126 5 view .LVU86
+ 378              		.loc 1 126 18 is_stmt 0 view .LVU87
+ 379 0134 0027     		movs	r7, #0
+ 380 0136 5B4B     		ldr	r3, .L48+28
+ 381 0138 1F70     		strb	r7, [r3]
+ 382              		.loc 1 127 5 is_stmt 1 view .LVU88
+ 383 013a 5C4E     		ldr	r6, .L48+36
+ 384 013c 0122     		movs	r2, #1
+ 385 013e 0221     		movs	r1, #2
+ 386 0140 3046     		mov	r0, r6
+ 387 0142 5B4C     		ldr	r4, .L48+40
+ 388 0144 A047     		blx	r4
+ 389              	.LVL34:
+ 390              		.loc 1 128 5 view .LVU89
+ 391 0146 3A46     		mov	r2, r7
+ 392 0148 0421     		movs	r1, #4
+ 393 014a 3046     		mov	r0, r6
+ 394 014c A047     		blx	r4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 8
+
+
+ 395              	.LVL35:
+ 396              		.loc 1 129 5 view .LVU90
+ 397 014e 3A46     		mov	r2, r7
+ 398 0150 0821     		movs	r1, #8
+ 399 0152 3046     		mov	r0, r6
+ 400 0154 A047     		blx	r4
+ 401              	.LVL36:
+ 402 0156 8BE0     		b	.L16
+ 403              	.LVL37:
+ 404              	.L20:
+ 405              	.LBB4:
+ 406              		.loc 1 134 41 discriminator 2 view .LVU91
+ 407              		.loc 1 134 42 is_stmt 0 discriminator 2 view .LVU92
+ 408 0158 0133     		adds	r3, r3, #1
+ 409              	.LVL38:
+ 410              	.L19:
+ 411              		.loc 1 134 23 is_stmt 1 discriminator 1 view .LVU93
+ 412              		.loc 1 134 3 is_stmt 0 discriminator 1 view .LVU94
+ 413 015a AB42     		cmp	r3, r5
+ 414 015c 0BD2     		bcs	.L44
+ 415              		.loc 1 136 4 is_stmt 1 view .LVU95
+ 416              		.loc 1 136 22 is_stmt 0 view .LVU96
+ 417 015e 00FB03F2 		mul	r2, r0, r3
+ 418              		.loc 1 136 18 view .LVU97
+ 419 0162 5649     		ldr	r1, .L48+52
+ 420 0164 0968     		ldr	r1, [r1]
+ 421              		.loc 1 136 6 view .LVU98
+ 422 0166 8A42     		cmp	r2, r1
+ 423 0168 F6D8     		bhi	.L20
+ 424              		.loc 1 136 55 discriminator 1 view .LVU99
+ 425 016a 03FB0002 		mla	r2, r3, r0, r0
+ 426              		.loc 1 136 34 discriminator 1 view .LVU100
+ 427 016e 9142     		cmp	r1, r2
+ 428 0170 F2D2     		bcs	.L20
+ 429              		.loc 1 138 20 view .LVU101
+ 430 0172 1C46     		mov	r4, r3
+ 431              	.LVL39:
+ 432              		.loc 1 138 20 view .LVU102
+ 433 0174 F0E7     		b	.L20
+ 434              	.LVL40:
+ 435              	.L44:
+ 436              		.loc 1 138 20 view .LVU103
+ 437              	.LBE4:
+ 438              		.loc 1 141 3 is_stmt 1 view .LVU104
+ 439              		.loc 1 141 16 is_stmt 0 view .LVU105
+ 440 0176 514B     		ldr	r3, .L48+52
+ 441              	.LVL41:
+ 442              		.loc 1 141 16 view .LVU106
+ 443 0178 1E68     		ldr	r6, [r3]
+ 444              		.loc 1 141 5 view .LVU107
+ 445 017a 3B2E     		cmp	r6, #59
+ 446 017c 00D9     		bls	.L22
+ 447              		.loc 1 143 19 view .LVU108
+ 448 017e 2C46     		mov	r4, r5
+ 449              	.LVL42:
+ 450              	.L22:
+ 451              		.loc 1 145 3 is_stmt 1 view .LVU109
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 9
+
+
+ 452              		.loc 1 145 5 is_stmt 0 view .LVU110
+ 453 0180 06B1     		cbz	r6, .L23
+ 454 0182 2646     		mov	r6, r4
+ 455              	.L23:
+ 456              	.LVL43:
+ 457              		.loc 1 149 3 is_stmt 1 view .LVU111
+ 458              	.LBB5:
+ 459              		.loc 1 149 8 view .LVU112
+ 460              		.loc 1 149 17 is_stmt 0 view .LVU113
+ 461 0184 0024     		movs	r4, #0
+ 462              		.loc 1 149 3 view .LVU114
+ 463 0186 02E0     		b	.L24
+ 464              	.LVL44:
+ 465              	.L25:
+ 466              		.loc 1 157 5 is_stmt 1 view .LVU115
+ 467 0188 4D4B     		ldr	r3, .L48+56
+ 468 018a 9847     		blx	r3
+ 469              	.LVL45:
+ 470              	.L26:
+ 471              		.loc 1 149 60 discriminator 2 view .LVU116
+ 472              		.loc 1 149 61 is_stmt 0 discriminator 2 view .LVU117
+ 473 018c 0134     		adds	r4, r4, #1
+ 474              	.LVL46:
+ 475              	.L24:
+ 476              		.loc 1 149 24 is_stmt 1 discriminator 1 view .LVU118
+ 477              		.loc 1 149 47 is_stmt 0 discriminator 1 view .LVU119
+ 478 018e 4D4B     		ldr	r3, .L48+60
+ 479 0190 1A68     		ldr	r2, [r3]
+ 480 0192 B31A     		subs	r3, r6, r2
+ 481              		.loc 1 149 28 discriminator 1 view .LVU120
+ 482 0194 002B     		cmp	r3, #0
+ 483 0196 B8BF     		it	lt
+ 484 0198 5B42     		rsblt	r3, r3, #0
+ 485              		.loc 1 149 3 discriminator 1 view .LVU121
+ 486 019a A342     		cmp	r3, r4
+ 487 019c 04D9     		bls	.L45
+ 488              		.loc 1 151 4 is_stmt 1 view .LVU122
+ 489              		.loc 1 151 7 is_stmt 0 view .LVU123
+ 490 019e B242     		cmp	r2, r6
+ 491 01a0 F2D2     		bcs	.L25
+ 492              		.loc 1 153 5 is_stmt 1 view .LVU124
+ 493 01a2 494B     		ldr	r3, .L48+64
+ 494 01a4 9847     		blx	r3
+ 495              	.LVL47:
+ 496 01a6 F1E7     		b	.L26
+ 497              	.L45:
+ 498              	.LBE5:
+ 499              		.loc 1 160 3 view .LVU125
+ 500              		.loc 1 160 12 is_stmt 0 view .LVU126
+ 501 01a8 464B     		ldr	r3, .L48+60
+ 502 01aa 1E60     		str	r6, [r3]
+ 503              		.loc 1 163 3 is_stmt 1 view .LVU127
+ 504 01ac 8D21     		movs	r1, #141
+ 505 01ae 0020     		movs	r0, #0
+ 506 01b0 3D4B     		ldr	r3, .L48+32
+ 507 01b2 9847     		blx	r3
+ 508              	.LVL48:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 10
+
+
+ 509              		.loc 1 166 3 view .LVU128
+ 510              	.LBB6:
+ 511              		.loc 1 166 8 view .LVU129
+ 512              		.loc 1 166 17 is_stmt 0 view .LVU130
+ 513 01b4 0024     		movs	r4, #0
+ 514              	.LVL49:
+ 515              		.loc 1 166 3 view .LVU131
+ 516 01b6 05E0     		b	.L28
+ 517              	.LVL50:
+ 518              	.L29:
+ 519              		.loc 1 168 4 is_stmt 1 discriminator 3 view .LVU132
+ 520 01b8 444B     		ldr	r3, .L48+68
+ 521 01ba 195D     		ldrb	r1, [r3, r4]	@ zero_extendqisi2
+ 522 01bc 0120     		movs	r0, #1
+ 523 01be 3A4B     		ldr	r3, .L48+32
+ 524 01c0 9847     		blx	r3
+ 525              	.LVL51:
+ 526              		.loc 1 166 46 discriminator 3 view .LVU133
+ 527              		.loc 1 166 47 is_stmt 0 discriminator 3 view .LVU134
+ 528 01c2 0134     		adds	r4, r4, #1
+ 529              	.LVL52:
+ 530              	.L28:
+ 531              		.loc 1 166 24 is_stmt 1 discriminator 1 view .LVU135
+ 532              		.loc 1 166 28 is_stmt 0 discriminator 1 view .LVU136
+ 533 01c4 4148     		ldr	r0, .L48+68
+ 534 01c6 424B     		ldr	r3, .L48+72
+ 535 01c8 9847     		blx	r3
+ 536              	.LVL53:
+ 537              		.loc 1 166 3 discriminator 1 view .LVU137
+ 538 01ca A042     		cmp	r0, r4
+ 539 01cc F4D8     		bhi	.L29
+ 540              	.LBE6:
+ 541              		.loc 1 170 3 is_stmt 1 view .LVU138
+ 542              		.loc 1 170 20 is_stmt 0 view .LVU139
+ 543 01ce 354B     		ldr	r3, .L48+28
+ 544 01d0 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 545              		.loc 1 170 6 view .LVU140
+ 546 01d2 002B     		cmp	r3, #0
+ 547 01d4 52D0     		beq	.L46
+ 548              	.LVL54:
+ 549              	.L30:
+ 550              		.loc 1 196 3 is_stmt 1 view .LVU141
+ 551 01d6 C820     		movs	r0, #200
+ 552 01d8 3E4B     		ldr	r3, .L48+76
+ 553 01da 9847     		blx	r3
+ 554              	.LVL55:
+ 555              		.loc 1 199 3 view .LVU142
+ 556              		.loc 1 199 20 is_stmt 0 view .LVU143
+ 557 01dc 314B     		ldr	r3, .L48+28
+ 558 01de 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 559              		.loc 1 199 6 view .LVU144
+ 560 01e0 002B     		cmp	r3, #0
+ 561 01e2 40F0B680 		bne	.L33
+ 562              		.loc 1 201 4 is_stmt 1 view .LVU145
+ 563 01e6 8D21     		movs	r1, #141
+ 564 01e8 0020     		movs	r0, #0
+ 565 01ea 2F4B     		ldr	r3, .L48+32
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 11
+
+
+ 566 01ec 9847     		blx	r3
+ 567              	.LVL56:
+ 568              		.loc 1 203 4 view .LVU146
+ 569              	.LBB7:
+ 570              		.loc 1 203 9 view .LVU147
+ 571              		.loc 1 203 18 is_stmt 0 view .LVU148
+ 572 01ee 0024     		movs	r4, #0
+ 573              	.LVL57:
+ 574              	.L34:
+ 575              		.loc 1 203 25 is_stmt 1 discriminator 1 view .LVU149
+ 576              		.loc 1 203 29 is_stmt 0 discriminator 1 view .LVU150
+ 577 01f0 3648     		ldr	r0, .L48+68
+ 578 01f2 374B     		ldr	r3, .L48+72
+ 579 01f4 9847     		blx	r3
+ 580              	.LVL58:
+ 581              		.loc 1 203 4 discriminator 1 view .LVU151
+ 582 01f6 A042     		cmp	r0, r4
+ 583 01f8 00F2A280 		bhi	.L47
+ 584              	.LVL59:
+ 585              	.L13:
+ 586              		.loc 1 203 4 discriminator 1 view .LVU152
+ 587              	.LBE7:
+ 588              	.LBE3:
+ 589              		.loc 1 59 2 is_stmt 1 view .LVU153
+ 590              	.LBB13:
+ 591              		.loc 1 61 3 view .LVU154
+ 592              		.loc 1 61 15 is_stmt 0 view .LVU155
+ 593 01fc 364B     		ldr	r3, .L48+80
+ 594 01fe 9847     		blx	r3
+ 595              	.LVL60:
+ 596              		.loc 1 61 13 view .LVU156
+ 597 0200 364B     		ldr	r3, .L48+84
+ 598 0202 9847     		blx	r3
+ 599              	.LVL61:
+ 600 0204 2D4C     		ldr	r4, .L48+52
+ 601 0206 2060     		str	r0, [r4]
+ 602              		.loc 1 62 3 is_stmt 1 view .LVU157
+ 603 0208 0A22     		movs	r2, #10
+ 604 020a 3049     		ldr	r1, .L48+68
+ 605 020c 234B     		ldr	r3, .L48+20
+ 606 020e 9847     		blx	r3
+ 607              	.LVL62:
+ 608              		.loc 1 66 3 view .LVU158
+ 609              		.loc 1 67 3 view .LVU159
+ 610              		.loc 1 67 17 is_stmt 0 view .LVU160
+ 611 0210 2368     		ldr	r3, [r4]
+ 612              		.loc 1 67 6 view .LVU161
+ 613 0212 1D2B     		cmp	r3, #29
+ 614 0214 3FF650AF 		bhi	.L14
+ 615              		.loc 1 69 4 is_stmt 1 view .LVU162
+ 616              		.loc 1 69 17 is_stmt 0 view .LVU163
+ 617 0218 224A     		ldr	r2, .L48+28
+ 618 021a 0021     		movs	r1, #0
+ 619 021c 1170     		strb	r1, [r2]
+ 620              		.loc 1 70 4 is_stmt 1 view .LVU164
+ 621              		.loc 1 70 7 is_stmt 0 view .LVU165
+ 622 021e 0E2B     		cmp	r3, #14
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 12
+
+
+ 623 0220 3FF63BAF 		bhi	.L15
+ 624              		.loc 1 72 5 is_stmt 1 view .LVU166
+ 625              		.loc 1 72 18 is_stmt 0 view .LVU167
+ 626 0224 0127     		movs	r7, #1
+ 627 0226 1770     		strb	r7, [r2]
+ 628              		.loc 1 73 5 is_stmt 1 view .LVU168
+ 629 0228 204E     		ldr	r6, .L48+36
+ 630 022a 0A46     		mov	r2, r1
+ 631 022c 0221     		movs	r1, #2
+ 632 022e 3046     		mov	r0, r6
+ 633 0230 1F4C     		ldr	r4, .L48+40
+ 634 0232 A047     		blx	r4
+ 635              	.LVL63:
+ 636              		.loc 1 74 5 view .LVU169
+ 637 0234 3A46     		mov	r2, r7
+ 638 0236 0421     		movs	r1, #4
+ 639 0238 3046     		mov	r0, r6
+ 640 023a A047     		blx	r4
+ 641              	.LVL64:
+ 642              		.loc 1 75 5 view .LVU170
+ 643 023c 0022     		movs	r2, #0
+ 644 023e 0821     		movs	r1, #8
+ 645 0240 3046     		mov	r0, r6
+ 646 0242 A047     		blx	r4
+ 647              	.LVL65:
+ 648              		.loc 1 76 5 view .LVU171
+ 649 0244 2648     		ldr	r0, .L48+88
+ 650 0246 114B     		ldr	r3, .L48+4
+ 651 0248 9847     		blx	r3
+ 652              	.LVL66:
+ 653              		.loc 1 77 5 view .LVU172
+ 654              		.loc 1 77 14 is_stmt 0 view .LVU173
+ 655 024a 1B4B     		ldr	r3, .L48+48
+ 656 024c 4C22     		movs	r2, #76
+ 657 024e 1A70     		strb	r2, [r3]
+ 658              		.loc 1 78 5 is_stmt 1 view .LVU174
+ 659              		.loc 1 78 14 is_stmt 0 view .LVU175
+ 660 0250 4522     		movs	r2, #69
+ 661 0252 5A70     		strb	r2, [r3, #1]
+ 662              		.loc 1 79 5 is_stmt 1 view .LVU176
+ 663              		.loc 1 79 14 is_stmt 0 view .LVU177
+ 664 0254 4421     		movs	r1, #68
+ 665 0256 9970     		strb	r1, [r3, #2]
+ 666              		.loc 1 80 5 is_stmt 1 view .LVU178
+ 667              		.loc 1 80 14 is_stmt 0 view .LVU179
+ 668 0258 DA70     		strb	r2, [r3, #3]
+ 669              		.loc 1 81 5 is_stmt 1 view .LVU180
+ 670              		.loc 1 81 14 is_stmt 0 view .LVU181
+ 671 025a 4E21     		movs	r1, #78
+ 672 025c 1971     		strb	r1, [r3, #4]
+ 673              		.loc 1 82 5 is_stmt 1 view .LVU182
+ 674              		.loc 1 82 14 is_stmt 0 view .LVU183
+ 675 025e 4F21     		movs	r1, #79
+ 676 0260 5971     		strb	r1, [r3, #5]
+ 677              		.loc 1 83 5 is_stmt 1 view .LVU184
+ 678              		.loc 1 83 14 is_stmt 0 view .LVU185
+ 679 0262 2021     		movs	r1, #32
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 13
+
+
+ 680 0264 9971     		strb	r1, [r3, #6]
+ 681              		.loc 1 84 5 is_stmt 1 view .LVU186
+ 682              		.loc 1 84 14 is_stmt 0 view .LVU187
+ 683 0266 4A21     		movs	r1, #74
+ 684 0268 D971     		strb	r1, [r3, #7]
+ 685              		.loc 1 85 5 is_stmt 1 view .LVU188
+ 686              		.loc 1 85 14 is_stmt 0 view .LVU189
+ 687 026a 1A72     		strb	r2, [r3, #8]
+ 688              		.loc 1 86 5 is_stmt 1 view .LVU190
+ 689              		.loc 1 86 14 is_stmt 0 view .LVU191
+ 690 026c 0022     		movs	r2, #0
+ 691 026e 5A72     		strb	r2, [r3, #9]
+ 692              	.L16:
+ 693              		.loc 1 133 3 is_stmt 1 view .LVU192
+ 694              		.loc 1 133 27 is_stmt 0 view .LVU193
+ 695 0270 3C20     		movs	r0, #60
+ 696 0272 90FBF5F0 		sdiv	r0, r0, r5
+ 697              	.LVL67:
+ 698              		.loc 1 134 3 is_stmt 1 view .LVU194
+ 699              	.LBB8:
+ 700              		.loc 1 134 7 view .LVU195
+ 701              		.loc 1 134 16 is_stmt 0 view .LVU196
+ 702 0276 0023     		movs	r3, #0
+ 703              	.LBE8:
+ 704              		.loc 1 66 12 view .LVU197
+ 705 0278 1C46     		mov	r4, r3
+ 706              	.LBB9:
+ 707              		.loc 1 134 3 view .LVU198
+ 708 027a 6EE7     		b	.L19
+ 709              	.LVL68:
+ 710              	.L46:
+ 711              		.loc 1 134 3 view .LVU199
+ 712              	.LBE9:
+ 713              		.loc 1 172 4 is_stmt 1 view .LVU200
+ 714 027c 8D21     		movs	r1, #141
+ 715 027e 0020     		movs	r0, #0
+ 716 0280 094B     		ldr	r3, .L48+32
+ 717 0282 9847     		blx	r3
+ 718              	.LVL69:
+ 719              		.loc 1 174 4 view .LVU201
+ 720              	.LBB10:
+ 721              		.loc 1 174 9 view .LVU202
+ 722              		.loc 1 174 18 is_stmt 0 view .LVU203
+ 723 0284 0024     		movs	r4, #0
+ 724              	.LVL70:
+ 725              		.loc 1 174 4 view .LVU204
+ 726 0286 36E0     		b	.L31
+ 727              	.L49:
+ 728              		.align	2
+ 729              	.L48:
+ 730 0288 00000000 		.word	.LANCHOR1
+ 731 028c 00000000 		.word	UART_AsyncTransmitString
+ 732 0290 00000000 		.word	UART_BlockReceiveDecimal
+ 733 0294 00000000 		.word	UART_AsyncTransmitCharacter
+ 734 0298 00000000 		.word	.LC1
+ 735 029c 00000000 		.word	itoa
+ 736 02a0 00000000 		.word	redefineSteps
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 14
+
+
+ 737 02a4 00000000 		.word	.LANCHOR2
+ 738 02a8 00000000 		.word	LCD_CommandEnqueue
+ 739 02ac 00080140 		.word	1073809408
+ 740 02b0 00000000 		.word	HAL_GPIO_WritePin
+ 741 02b4 1C000000 		.word	.LC4
+ 742 02b8 00000000 		.word	.LANCHOR4
+ 743 02bc 00000000 		.word	.LANCHOR0
+ 744 02c0 00000000 		.word	MOTOR_SpeedDecrease
+ 745 02c4 00000000 		.word	.LANCHOR5
+ 746 02c8 00000000 		.word	MOTOR_SpeedIncrease
+ 747 02cc 00000000 		.word	.LANCHOR3
+ 748 02d0 00000000 		.word	strlen
+ 749 02d4 00000000 		.word	vTaskDelay
+ 750 02d8 00000000 		.word	TEMP_GetCurrentValue
+ 751 02dc 00000000 		.word	__aeabi_f2uiz
+ 752 02e0 10000000 		.word	.LC3
+ 753              	.LVL71:
+ 754              	.L32:
+ 755              		.loc 1 176 5 is_stmt 1 discriminator 3 view .LVU205
+ 756              		.loc 1 176 42 is_stmt 0 discriminator 3 view .LVU206
+ 757 02e4 254E     		ldr	r6, .L50
+ 758              		.loc 1 176 5 discriminator 3 view .LVU207
+ 759 02e6 315D     		ldrb	r1, [r6, r4]	@ zero_extendqisi2
+ 760 02e8 0120     		movs	r0, #1
+ 761 02ea 254B     		ldr	r3, .L50+4
+ 762 02ec 9847     		blx	r3
+ 763              	.LVL72:
+ 764              		.loc 1 177 5 is_stmt 1 discriminator 3 view .LVU208
+ 765 02ee 305D     		ldrb	r0, [r6, r4]	@ zero_extendqisi2
+ 766 02f0 244B     		ldr	r3, .L50+8
+ 767 02f2 9847     		blx	r3
+ 768              	.LVL73:
+ 769              		.loc 1 174 47 discriminator 3 view .LVU209
+ 770              		.loc 1 174 48 is_stmt 0 discriminator 3 view .LVU210
+ 771 02f4 0134     		adds	r4, r4, #1
+ 772              	.LVL74:
+ 773              	.L31:
+ 774              		.loc 1 174 25 is_stmt 1 discriminator 1 view .LVU211
+ 775              		.loc 1 174 29 is_stmt 0 discriminator 1 view .LVU212
+ 776 02f6 2148     		ldr	r0, .L50
+ 777 02f8 234B     		ldr	r3, .L50+12
+ 778 02fa 9847     		blx	r3
+ 779              	.LVL75:
+ 780              		.loc 1 174 4 discriminator 1 view .LVU213
+ 781 02fc A042     		cmp	r0, r4
+ 782 02fe F1D8     		bhi	.L32
+ 783              	.LBE10:
+ 784              		.loc 1 180 4 is_stmt 1 view .LVU214
+ 785 0300 4821     		movs	r1, #72
+ 786 0302 0020     		movs	r0, #0
+ 787 0304 1E4C     		ldr	r4, .L50+4
+ 788              	.LVL76:
+ 789              		.loc 1 180 4 is_stmt 0 view .LVU215
+ 790 0306 A047     		blx	r4
+ 791              	.LVL77:
+ 792              		.loc 1 183 4 is_stmt 1 view .LVU216
+ 793 0308 1321     		movs	r1, #19
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 15
+
+
+ 794 030a 0120     		movs	r0, #1
+ 795 030c A047     		blx	r4
+ 796              	.LVL78:
+ 797              		.loc 1 184 4 view .LVU217
+ 798 030e 0421     		movs	r1, #4
+ 799 0310 0120     		movs	r0, #1
+ 800 0312 A047     		blx	r4
+ 801              	.LVL79:
+ 802              		.loc 1 185 4 view .LVU218
+ 803 0314 0821     		movs	r1, #8
+ 804 0316 0120     		movs	r0, #1
+ 805 0318 A047     		blx	r4
+ 806              	.LVL80:
+ 807              		.loc 1 186 4 view .LVU219
+ 808 031a 0821     		movs	r1, #8
+ 809 031c 0120     		movs	r0, #1
+ 810 031e A047     		blx	r4
+ 811              	.LVL81:
+ 812              		.loc 1 187 4 view .LVU220
+ 813 0320 0821     		movs	r1, #8
+ 814 0322 0120     		movs	r0, #1
+ 815 0324 A047     		blx	r4
+ 816              	.LVL82:
+ 817              		.loc 1 188 4 view .LVU221
+ 818 0326 0421     		movs	r1, #4
+ 819 0328 0120     		movs	r0, #1
+ 820 032a A047     		blx	r4
+ 821              	.LVL83:
+ 822              		.loc 1 189 4 view .LVU222
+ 823 032c 0321     		movs	r1, #3
+ 824 032e 0120     		movs	r0, #1
+ 825 0330 A047     		blx	r4
+ 826              	.LVL84:
+ 827              		.loc 1 191 4 view .LVU223
+ 828 0332 8F21     		movs	r1, #143
+ 829 0334 0020     		movs	r0, #0
+ 830 0336 A047     		blx	r4
+ 831              	.LVL85:
+ 832              		.loc 1 193 4 view .LVU224
+ 833 0338 0121     		movs	r1, #1
+ 834 033a 0846     		mov	r0, r1
+ 835 033c A047     		blx	r4
+ 836              	.LVL86:
+ 837 033e 4AE7     		b	.L30
+ 838              	.LVL87:
+ 839              	.L47:
+ 840              	.LBB11:
+ 841              		.loc 1 205 5 discriminator 3 view .LVU225
+ 842 0340 2021     		movs	r1, #32
+ 843 0342 0120     		movs	r0, #1
+ 844 0344 0E4B     		ldr	r3, .L50+4
+ 845 0346 9847     		blx	r3
+ 846              	.LVL88:
+ 847              		.loc 1 206 5 discriminator 3 view .LVU226
+ 848 0348 0820     		movs	r0, #8
+ 849 034a 0E4B     		ldr	r3, .L50+8
+ 850 034c 9847     		blx	r3
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 16
+
+
+ 851              	.LVL89:
+ 852              		.loc 1 203 47 discriminator 3 view .LVU227
+ 853              		.loc 1 203 48 is_stmt 0 discriminator 3 view .LVU228
+ 854 034e 0134     		adds	r4, r4, #1
+ 855              	.LVL90:
+ 856              		.loc 1 203 48 discriminator 3 view .LVU229
+ 857 0350 4EE7     		b	.L34
+ 858              	.LVL91:
+ 859              	.L33:
+ 860              		.loc 1 203 48 discriminator 3 view .LVU230
+ 861              	.LBE11:
+ 862              		.loc 1 211 4 is_stmt 1 view .LVU231
+ 863 0352 8D21     		movs	r1, #141
+ 864 0354 0020     		movs	r0, #0
+ 865 0356 0A4B     		ldr	r3, .L50+4
+ 866 0358 9847     		blx	r3
+ 867              	.LVL92:
+ 868              		.loc 1 213 4 view .LVU232
+ 869              	.LBB12:
+ 870              		.loc 1 213 9 view .LVU233
+ 871              		.loc 1 213 18 is_stmt 0 view .LVU234
+ 872 035a 0024     		movs	r4, #0
+ 873              		.loc 1 213 4 view .LVU235
+ 874 035c 07E0     		b	.L37
+ 875              	.LVL93:
+ 876              	.L38:
+ 877              		.loc 1 215 5 is_stmt 1 discriminator 3 view .LVU236
+ 878 035e 2021     		movs	r1, #32
+ 879 0360 0120     		movs	r0, #1
+ 880 0362 074B     		ldr	r3, .L50+4
+ 881 0364 9847     		blx	r3
+ 882              	.LVL94:
+ 883              		.loc 1 216 5 discriminator 3 view .LVU237
+ 884 0366 0820     		movs	r0, #8
+ 885 0368 064B     		ldr	r3, .L50+8
+ 886 036a 9847     		blx	r3
+ 887              	.LVL95:
+ 888              		.loc 1 213 44 discriminator 3 view .LVU238
+ 889              		.loc 1 213 45 is_stmt 0 discriminator 3 view .LVU239
+ 890 036c 0134     		adds	r4, r4, #1
+ 891              	.LVL96:
+ 892              	.L37:
+ 893              		.loc 1 213 25 is_stmt 1 discriminator 1 view .LVU240
+ 894              		.loc 1 213 29 is_stmt 0 discriminator 1 view .LVU241
+ 895 036e 0748     		ldr	r0, .L50+16
+ 896 0370 054B     		ldr	r3, .L50+12
+ 897 0372 9847     		blx	r3
+ 898              	.LVL97:
+ 899              		.loc 1 213 4 discriminator 1 view .LVU242
+ 900 0374 A042     		cmp	r0, r4
+ 901 0376 F2D8     		bhi	.L38
+ 902 0378 40E7     		b	.L13
+ 903              	.L51:
+ 904 037a 00BF     		.align	2
+ 905              	.L50:
+ 906 037c 00000000 		.word	.LANCHOR3
+ 907 0380 00000000 		.word	LCD_CommandEnqueue
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 17
+
+
+ 908 0384 00000000 		.word	UART_AsyncTransmitCharacter
+ 909 0388 00000000 		.word	strlen
+ 910 038c 00000000 		.word	.LANCHOR4
+ 911              	.LBE12:
+ 912              	.LBE13:
+ 913              		.cfi_endproc
+ 914              	.LFE69:
+ 916              		.section	.rodata.homeworkInit.str1.4,"aMS",%progbits,1
+ 917              		.align	2
+ 918              	.LC5:
+ 919 0000 74696D65 		.ascii	"timerToggler\000"
+ 919      72546F67 
+ 919      676C6572 
+ 919      00
+ 920 000d 000000   		.align	2
+ 921              	.LC6:
+ 922 0010 686F6D65 		.ascii	"homeworkTask\000"
+ 922      776F726B 
+ 922      5461736B 
+ 922      00
+ 923              		.section	.text.homeworkInit,"ax",%progbits
+ 924              		.align	1
+ 925              		.global	homeworkInit
+ 926              		.syntax unified
+ 927              		.thumb
+ 928              		.thumb_func
+ 929              		.fpu softvfp
+ 931              	homeworkInit:
+ 932              	.LFB71:
+ 933              		.loc 1 235 1 is_stmt 1 view -0
+ 934              		.cfi_startproc
+ 935              		@ args = 0, pretend = 0, frame = 0
+ 936              		@ frame_needed = 0, uses_anonymous_args = 0
+ 937 0000 10B5     		push	{r4, lr}
+ 938              	.LCFI3:
+ 939              		.cfi_def_cfa_offset 8
+ 940              		.cfi_offset 4, -8
+ 941              		.cfi_offset 14, -4
+ 942 0002 82B0     		sub	sp, sp, #8
+ 943              	.LCFI4:
+ 944              		.cfi_def_cfa_offset 16
+ 945              		.loc 1 236 2 view .LVU244
+ 946              		.loc 1 236 17 is_stmt 0 view .LVU245
+ 947 0004 154B     		ldr	r3, .L54
+ 948 0006 0093     		str	r3, [sp]
+ 949 0008 0023     		movs	r3, #0
+ 950 000a 0122     		movs	r2, #1
+ 951 000c 4FF47A71 		mov	r1, #1000
+ 952 0010 1348     		ldr	r0, .L54+4
+ 953 0012 144C     		ldr	r4, .L54+8
+ 954 0014 A047     		blx	r4
+ 955              	.LVL98:
+ 956 0016 0446     		mov	r4, r0
+ 957              		.loc 1 236 15 view .LVU246
+ 958 0018 134B     		ldr	r3, .L54+12
+ 959 001a 1860     		str	r0, [r3]
+ 960              		.loc 1 237 2 is_stmt 1 view .LVU247
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 18
+
+
+ 961 001c 134B     		ldr	r3, .L54+16
+ 962 001e 9847     		blx	r3
+ 963              	.LVL99:
+ 964 0020 0246     		mov	r2, r0
+ 965 0022 4FF0FF33 		mov	r3, #-1
+ 966 0026 0093     		str	r3, [sp]
+ 967 0028 0023     		movs	r3, #0
+ 968 002a 0121     		movs	r1, #1
+ 969 002c 2046     		mov	r0, r4
+ 970 002e 104C     		ldr	r4, .L54+20
+ 971 0030 A047     		blx	r4
+ 972              	.LVL100:
+ 973              		.loc 1 238 2 view .LVU248
+ 974 0032 104B     		ldr	r3, .L54+24
+ 975 0034 9847     		blx	r3
+ 976              	.LVL101:
+ 977              		.loc 1 239 2 view .LVU249
+ 978 0036 104B     		ldr	r3, .L54+28
+ 979 0038 9847     		blx	r3
+ 980              	.LVL102:
+ 981              		.loc 1 240 2 view .LVU250
+ 982 003a 104B     		ldr	r3, .L54+32
+ 983 003c 9847     		blx	r3
+ 984              	.LVL103:
+ 985              		.loc 1 241 2 view .LVU251
+ 986 003e 104B     		ldr	r3, .L54+36
+ 987 0040 9847     		blx	r3
+ 988              	.LVL104:
+ 989              		.loc 1 242 2 view .LVU252
+ 990 0042 0023     		movs	r3, #0
+ 991 0044 0193     		str	r3, [sp, #4]
+ 992 0046 0522     		movs	r2, #5
+ 993 0048 0092     		str	r2, [sp]
+ 994 004a 4022     		movs	r2, #64
+ 995 004c 0D49     		ldr	r1, .L54+40
+ 996 004e 0E48     		ldr	r0, .L54+44
+ 997 0050 0E4C     		ldr	r4, .L54+48
+ 998 0052 A047     		blx	r4
+ 999              	.LVL105:
+ 1000              		.loc 1 243 2 view .LVU253
+ 1001 0054 0E4B     		ldr	r3, .L54+52
+ 1002 0056 9847     		blx	r3
+ 1003              	.LVL106:
+ 1004              		.loc 1 244 1 is_stmt 0 view .LVU254
+ 1005 0058 02B0     		add	sp, sp, #8
+ 1006              	.LCFI5:
+ 1007              		.cfi_def_cfa_offset 8
+ 1008              		@ sp needed
+ 1009 005a 10BD     		pop	{r4, pc}
+ 1010              	.L55:
+ 1011              		.align	2
+ 1012              	.L54:
+ 1013 005c 00000000 		.word	timerTogglerCallback
+ 1014 0060 00000000 		.word	.LC5
+ 1015 0064 00000000 		.word	xTimerCreate
+ 1016 0068 00000000 		.word	.LANCHOR6
+ 1017 006c 00000000 		.word	xTaskGetTickCount
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 19
+
+
+ 1018 0070 00000000 		.word	xTimerGenericCommand
+ 1019 0074 00000000 		.word	LCD_Init
+ 1020 0078 00000000 		.word	UART_Init
+ 1021 007c 00000000 		.word	MOTOR_Init
+ 1022 0080 00000000 		.word	TEMP_Init
+ 1023 0084 10000000 		.word	.LC6
+ 1024 0088 00000000 		.word	homeworkTask
+ 1025 008c 00000000 		.word	xTaskCreate
+ 1026 0090 00000000 		.word	KEY_Init
+ 1027              		.cfi_endproc
+ 1028              	.LFE71:
+ 1030              		.global	fanState
+ 1031              		.section	.rodata
+ 1032              		.align	2
+ 1033              		.set	.LANCHOR1,. + 0
+ 1034              	.LC0:
+ 1035 0000 42726F6A 		.ascii	"Broj podeoka: \000"
+ 1035      20706F64 
+ 1035      656F6B61 
+ 1035      3A2000
+ 1036 000f 00       		.space	1
+ 1037              	.LC2:
+ 1038 0010 54656D70 		.ascii	"Temperatura: \000"
+ 1038      65726174 
+ 1038      7572613A 
+ 1038      2000
+ 1039 001e 0000     		.space	2
+ 1040              		.section	.bss.fanState,"aw",%nobits
+ 1041              		.align	2
+ 1042              		.set	.LANCHOR5,. + 0
+ 1045              	fanState:
+ 1046 0000 00000000 		.space	4
+ 1047              		.section	.bss.ispis,"aw",%nobits
+ 1048              		.align	2
+ 1049              		.set	.LANCHOR4,. + 0
+ 1052              	ispis:
+ 1053 0000 00000000 		.space	10
+ 1053      00000000 
+ 1053      0000
+ 1054              		.section	.bss.posebanIspis,"aw",%nobits
+ 1055              		.set	.LANCHOR2,. + 0
+ 1058              	posebanIspis:
+ 1059 0000 00       		.space	1
+ 1060              		.section	.bss.tempText,"aw",%nobits
+ 1061              		.align	2
+ 1062              		.set	.LANCHOR3,. + 0
+ 1065              	tempText:
+ 1066 0000 00000000 		.space	4
+ 1067              		.section	.bss.tempValue,"aw",%nobits
+ 1068              		.align	2
+ 1069              		.set	.LANCHOR0,. + 0
+ 1072              	tempValue:
+ 1073 0000 00000000 		.space	4
+ 1074              		.section	.bss.timerToggler,"aw",%nobits
+ 1075              		.align	2
+ 1076              		.set	.LANCHOR6,. + 0
+ 1079              	timerToggler:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 20
+
+
+ 1080 0000 00000000 		.space	4
+ 1081              		.text
+ 1082              	.Letext0:
+ 1083              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 1084              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 1085              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 1086              		.file 5 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 1087              		.file 6 "../Core/Inc/driver_lcd.h"
+ 1088              		.file 7 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 1089              		.file 8 "../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h"
+ 1090              		.file 9 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 1091              		.file 10 "../Core/Inc/driver_uart.h"
+ 1092              		.file 11 "../Core/Inc/driver_motor.h"
+ 1093              		.file 12 "../Core/Inc/driver_temp.h"
+ 1094              		.file 13 "../Core/Inc/driver_keypad.h"
+ 1095              		.file 14 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\inc
+ 1096              		.file 15 "../<built-in>"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 homework.c
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:16     .text.timerTogglerCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:24     .text.timerTogglerCallback:0000000000000000 timerTogglerCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:80     .text.timerTogglerCallback:0000000000000028 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:87     .rodata.homeworkTask.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:98     .text.homeworkTask:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:104    .text.homeworkTask:0000000000000000 homeworkTask
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:730    .text.homeworkTask:0000000000000288 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:757    .text.homeworkTask:00000000000002e4 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:906    .text.homeworkTask:000000000000037c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:917    .rodata.homeworkInit.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:924    .text.homeworkInit:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:931    .text.homeworkInit:0000000000000000 homeworkInit
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1013   .text.homeworkInit:000000000000005c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1045   .bss.fanState:0000000000000000 fanState
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1032   .rodata:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1041   .bss.fanState:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1048   .bss.ispis:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1052   .bss.ispis:0000000000000000 ispis
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1058   .bss.posebanIspis:0000000000000000 posebanIspis
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1059   .bss.posebanIspis:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1061   .bss.tempText:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1065   .bss.tempText:0000000000000000 tempText
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1068   .bss.tempValue:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1072   .bss.tempValue:0000000000000000 tempValue
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1075   .bss.timerToggler:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccWMp1BC.s:1079   .bss.timerToggler:0000000000000000 timerToggler
+
+UNDEFINED SYMBOLS
+HAL_GPIO_TogglePin
+__aeabi_f2uiz
+UART_AsyncTransmitString
+UART_BlockReceiveDecimal
+UART_AsyncTransmitCharacter
+itoa
+redefineSteps
+LCD_CommandEnqueue
+HAL_GPIO_WritePin
+MOTOR_SpeedDecrease
+MOTOR_SpeedIncrease
+strlen
+vTaskDelay
+TEMP_GetCurrentValue
+xTimerCreate
+xTaskGetTickCount
+xTimerGenericCommand
+LCD_Init
+UART_Init
+MOTOR_Init
+TEMP_Init
+xTaskCreate
+KEY_Init

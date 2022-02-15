@@ -1,0 +1,449 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_lcd.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.LCD_Write,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	LCD_Write:
+  24              	.LVL0:
+  25              	.LFB69:
+  26              		.file 1 "../Core/Src/driver_lcd.c"
+   1:../Core/Src/driver_lcd.c **** 
+  27              		.loc 1 19 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              		.loc 1 20 2 view .LVU1
+  33              		.loc 1 20 29 is_stmt 0 view .LVU2
+  34 0000 4001     		lsls	r0, r0, #5
+  35              	.LVL1:
+  36              		.loc 1 20 29 view .LVU3
+  37 0002 00F02000 		and	r0, r0, #32
+  38              		.loc 1 20 42 view .LVU4
+  39 0006 01F00F01 		and	r1, r1, #15
+  40              	.LVL2:
+  41              		.loc 1 20 35 view .LVU5
+  42 000a 0843     		orrs	r0, r0, r1
+  43              		.loc 1 20 13 view .LVU6
+  44 000c 054B     		ldr	r3, .L2
+  45 000e D860     		str	r0, [r3, #12]
+  46              		.loc 1 22 2 is_stmt 1 view .LVU7
+  47              		.loc 1 22 13 is_stmt 0 view .LVU8
+  48 0010 DA68     		ldr	r2, [r3, #12]
+  49 0012 42F04002 		orr	r2, r2, #64
+  50 0016 DA60     		str	r2, [r3, #12]
+  51              		.loc 1 23 2 is_stmt 1 view .LVU9
+  52              		.loc 1 23 13 is_stmt 0 view .LVU10
+  53 0018 DA68     		ldr	r2, [r3, #12]
+  54 001a 22F04002 		bic	r2, r2, #64
+  55 001e DA60     		str	r2, [r3, #12]
+  56              		.loc 1 24 1 view .LVU11
+  57 0020 7047     		bx	lr
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 2
+
+
+  58              	.L3:
+  59 0022 00BF     		.align	2
+  60              	.L2:
+  61 0024 00100140 		.word	1073811456
+  62              		.cfi_endproc
+  63              	.LFE69:
+  65              		.section	.text.LCD_CommandInitiate,"ax",%progbits
+  66              		.align	1
+  67              		.syntax unified
+  68              		.thumb
+  69              		.thumb_func
+  70              		.fpu softvfp
+  72              	LCD_CommandInitiate:
+  73              	.LVL3:
+  74              	.LFB70:
+  75              		.loc 1 27 1 is_stmt 1 view -0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79              		.loc 1 27 1 is_stmt 0 view .LVU13
+  80 0000 70B5     		push	{r4, r5, r6, lr}
+  81              	.LCFI0:
+  82              		.cfi_def_cfa_offset 16
+  83              		.cfi_offset 4, -16
+  84              		.cfi_offset 5, -12
+  85              		.cfi_offset 6, -8
+  86              		.cfi_offset 14, -4
+  87 0002 0546     		mov	r5, r0
+  88 0004 0C46     		mov	r4, r1
+  89              		.loc 1 29 2 is_stmt 1 view .LVU14
+  90 0006 0909     		lsrs	r1, r1, #4
+  91              	.LVL4:
+  92              		.loc 1 29 2 is_stmt 0 view .LVU15
+  93 0008 044E     		ldr	r6, .L6
+  94 000a B047     		blx	r6
+  95              	.LVL5:
+  96              		.loc 1 30 2 is_stmt 1 view .LVU16
+  97 000c 2146     		mov	r1, r4
+  98 000e 2846     		mov	r0, r5
+  99 0010 B047     		blx	r6
+ 100              	.LVL6:
+ 101              		.loc 1 31 2 view .LVU17
+ 102 0012 0220     		movs	r0, #2
+ 103 0014 024B     		ldr	r3, .L6+4
+ 104 0016 9847     		blx	r3
+ 105              	.LVL7:
+ 106              		.loc 1 32 1 is_stmt 0 view .LVU18
+ 107 0018 70BD     		pop	{r4, r5, r6, pc}
+ 108              	.L7:
+ 109 001a 00BF     		.align	2
+ 110              	.L6:
+ 111 001c 00000000 		.word	LCD_Write
+ 112 0020 00000000 		.word	vTaskDelay
+ 113              		.cfi_endproc
+ 114              	.LFE70:
+ 116              		.section	.text.LCD_Task,"ax",%progbits
+ 117              		.align	1
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 3
+
+
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	LCD_Task:
+ 124              	.LVL8:
+ 125              	.LFB71:
+ 126              		.loc 1 38 1 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ Volatile: function does not return.
+ 129              		@ args = 0, pretend = 0, frame = 8
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		.loc 1 38 1 is_stmt 0 view .LVU20
+ 132 0000 00B5     		push	{lr}
+ 133              	.LCFI1:
+ 134              		.cfi_def_cfa_offset 4
+ 135              		.cfi_offset 14, -4
+ 136 0002 83B0     		sub	sp, sp, #12
+ 137              	.LCFI2:
+ 138              		.cfi_def_cfa_offset 16
+ 139              		.loc 1 40 2 is_stmt 1 view .LVU21
+ 140 0004 1420     		movs	r0, #20
+ 141              	.LVL9:
+ 142              		.loc 1 40 2 is_stmt 0 view .LVU22
+ 143 0006 114C     		ldr	r4, .L11
+ 144 0008 A047     		blx	r4
+ 145              	.LVL10:
+ 146              		.loc 1 42 2 is_stmt 1 view .LVU23
+ 147 000a 0221     		movs	r1, #2
+ 148 000c 0020     		movs	r0, #0
+ 149 000e 104B     		ldr	r3, .L11+4
+ 150 0010 9847     		blx	r3
+ 151              	.LVL11:
+ 152              		.loc 1 45 2 view .LVU24
+ 153 0012 0220     		movs	r0, #2
+ 154 0014 A047     		blx	r4
+ 155              	.LVL12:
+ 156              		.loc 1 47 2 view .LVU25
+ 157 0016 2821     		movs	r1, #40
+ 158 0018 0020     		movs	r0, #0
+ 159 001a 0E4C     		ldr	r4, .L11+8
+ 160 001c A047     		blx	r4
+ 161              	.LVL13:
+ 162              		.loc 1 53 2 view .LVU26
+ 163 001e 0C21     		movs	r1, #12
+ 164 0020 0020     		movs	r0, #0
+ 165 0022 A047     		blx	r4
+ 166              	.LVL14:
+ 167              		.loc 1 59 2 view .LVU27
+ 168 0024 0621     		movs	r1, #6
+ 169 0026 0020     		movs	r0, #0
+ 170 0028 A047     		blx	r4
+ 171              	.LVL15:
+ 172              		.loc 1 64 2 view .LVU28
+ 173 002a 0221     		movs	r1, #2
+ 174 002c 0020     		movs	r0, #0
+ 175 002e A047     		blx	r4
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 4
+
+
+ 176              	.LVL16:
+ 177              	.L9:
+ 178              		.loc 1 66 2 discriminator 1 view .LVU29
+ 179              		.loc 1 67 2 discriminator 1 view .LVU30
+ 180              		.loc 1 69 3 discriminator 1 view .LVU31
+ 181 0030 4FF0FF32 		mov	r2, #-1
+ 182 0034 01A9     		add	r1, sp, #4
+ 183 0036 084B     		ldr	r3, .L11+12
+ 184 0038 1868     		ldr	r0, [r3]
+ 185 003a 084B     		ldr	r3, .L11+16
+ 186 003c 9847     		blx	r3
+ 187              	.LVL17:
+ 188              		.loc 1 70 3 discriminator 1 view .LVU32
+ 189 003e 9DF80510 		ldrb	r1, [sp, #5]	@ zero_extendqisi2
+ 190 0042 9DF80400 		ldrb	r0, [sp, #4]	@ zero_extendqisi2
+ 191 0046 034B     		ldr	r3, .L11+8
+ 192 0048 9847     		blx	r3
+ 193              	.LVL18:
+ 194              		.loc 1 67 8 discriminator 1 view .LVU33
+ 195 004a F1E7     		b	.L9
+ 196              	.L12:
+ 197              		.align	2
+ 198              	.L11:
+ 199 004c 00000000 		.word	vTaskDelay
+ 200 0050 00000000 		.word	LCD_Write
+ 201 0054 00000000 		.word	LCD_CommandInitiate
+ 202 0058 00000000 		.word	.LANCHOR0
+ 203 005c 00000000 		.word	xQueueReceive
+ 204              		.cfi_endproc
+ 205              	.LFE71:
+ 207              		.section	.rodata.LCD_Init.str1.4,"aMS",%progbits,1
+ 208              		.align	2
+ 209              	.LC0:
+ 210 0000 4C43445F 		.ascii	"LCD_Task\000"
+ 210      5461736B 
+ 210      00
+ 211              		.section	.text.LCD_Init,"ax",%progbits
+ 212              		.align	1
+ 213              		.global	LCD_Init
+ 214              		.syntax unified
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.fpu softvfp
+ 219              	LCD_Init:
+ 220              	.LFB72:
+ 221              		.loc 1 75 1 view -0
+ 222              		.cfi_startproc
+ 223              		@ args = 0, pretend = 0, frame = 0
+ 224              		@ frame_needed = 0, uses_anonymous_args = 0
+ 225 0000 10B5     		push	{r4, lr}
+ 226              	.LCFI3:
+ 227              		.cfi_def_cfa_offset 8
+ 228              		.cfi_offset 4, -8
+ 229              		.cfi_offset 14, -4
+ 230 0002 82B0     		sub	sp, sp, #8
+ 231              	.LCFI4:
+ 232              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 5
+
+
+ 233              		.loc 1 76 2 view .LVU35
+ 234              		.loc 1 76 20 is_stmt 0 view .LVU36
+ 235 0004 0022     		movs	r2, #0
+ 236 0006 0221     		movs	r1, #2
+ 237 0008 4020     		movs	r0, #64
+ 238 000a 084B     		ldr	r3, .L15
+ 239 000c 9847     		blx	r3
+ 240              	.LVL19:
+ 241              		.loc 1 76 18 view .LVU37
+ 242 000e 084B     		ldr	r3, .L15+4
+ 243 0010 1860     		str	r0, [r3]
+ 244              		.loc 1 77 2 is_stmt 1 view .LVU38
+ 245 0012 084B     		ldr	r3, .L15+8
+ 246 0014 0193     		str	r3, [sp, #4]
+ 247 0016 0223     		movs	r3, #2
+ 248 0018 0093     		str	r3, [sp]
+ 249 001a 0023     		movs	r3, #0
+ 250 001c 4022     		movs	r2, #64
+ 251 001e 0649     		ldr	r1, .L15+12
+ 252 0020 0648     		ldr	r0, .L15+16
+ 253 0022 074C     		ldr	r4, .L15+20
+ 254 0024 A047     		blx	r4
+ 255              	.LVL20:
+ 256              		.loc 1 78 1 is_stmt 0 view .LVU39
+ 257 0026 02B0     		add	sp, sp, #8
+ 258              	.LCFI5:
+ 259              		.cfi_def_cfa_offset 8
+ 260              		@ sp needed
+ 261 0028 10BD     		pop	{r4, pc}
+ 262              	.L16:
+ 263 002a 00BF     		.align	2
+ 264              	.L15:
+ 265 002c 00000000 		.word	xQueueGenericCreate
+ 266 0030 00000000 		.word	.LANCHOR0
+ 267 0034 00000000 		.word	.LANCHOR1
+ 268 0038 00000000 		.word	.LC0
+ 269 003c 00000000 		.word	LCD_Task
+ 270 0040 00000000 		.word	xTaskCreate
+ 271              		.cfi_endproc
+ 272              	.LFE72:
+ 274              		.section	.text.LCD_CommandEnqueue,"ax",%progbits
+ 275              		.align	1
+ 276              		.global	LCD_CommandEnqueue
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 280              		.fpu softvfp
+ 282              	LCD_CommandEnqueue:
+ 283              	.LVL21:
+ 284              	.LFB73:
+ 285              		.loc 1 81 1 is_stmt 1 view -0
+ 286              		.cfi_startproc
+ 287              		@ args = 0, pretend = 0, frame = 8
+ 288              		@ frame_needed = 0, uses_anonymous_args = 0
+ 289              		.loc 1 81 1 is_stmt 0 view .LVU41
+ 290 0000 10B5     		push	{r4, lr}
+ 291              	.LCFI6:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 6
+
+
+ 292              		.cfi_def_cfa_offset 8
+ 293              		.cfi_offset 4, -8
+ 294              		.cfi_offset 14, -4
+ 295 0002 82B0     		sub	sp, sp, #8
+ 296              	.LCFI7:
+ 297              		.cfi_def_cfa_offset 16
+ 298              		.loc 1 82 2 is_stmt 1 view .LVU42
+ 299              		.loc 1 82 14 is_stmt 0 view .LVU43
+ 300 0004 8DF80400 		strb	r0, [sp, #4]
+ 301 0008 8DF80510 		strb	r1, [sp, #5]
+ 302              		.loc 1 84 2 is_stmt 1 view .LVU44
+ 303 000c 0023     		movs	r3, #0
+ 304 000e 4FF0FF32 		mov	r2, #-1
+ 305 0012 01A9     		add	r1, sp, #4
+ 306              	.LVL22:
+ 307              		.loc 1 84 2 is_stmt 0 view .LVU45
+ 308 0014 0248     		ldr	r0, .L19
+ 309              	.LVL23:
+ 310              		.loc 1 84 2 view .LVU46
+ 311 0016 0068     		ldr	r0, [r0]
+ 312 0018 024C     		ldr	r4, .L19+4
+ 313 001a A047     		blx	r4
+ 314              	.LVL24:
+ 315              		.loc 1 85 1 view .LVU47
+ 316 001c 02B0     		add	sp, sp, #8
+ 317              	.LCFI8:
+ 318              		.cfi_def_cfa_offset 8
+ 319              		@ sp needed
+ 320 001e 10BD     		pop	{r4, pc}
+ 321              	.L20:
+ 322              		.align	2
+ 323              	.L19:
+ 324 0020 00000000 		.word	.LANCHOR0
+ 325 0024 00000000 		.word	xQueueGenericSend
+ 326              		.cfi_endproc
+ 327              	.LFE73:
+ 329              		.section	.text.LCD_CommandEnqueueFromISR,"ax",%progbits
+ 330              		.align	1
+ 331              		.global	LCD_CommandEnqueueFromISR
+ 332              		.syntax unified
+ 333              		.thumb
+ 334              		.thumb_func
+ 335              		.fpu softvfp
+ 337              	LCD_CommandEnqueueFromISR:
+ 338              	.LVL25:
+ 339              	.LFB74:
+ 340              		.loc 1 89 1 is_stmt 1 view -0
+ 341              		.cfi_startproc
+ 342              		@ args = 0, pretend = 0, frame = 8
+ 343              		@ frame_needed = 0, uses_anonymous_args = 0
+ 344              		.loc 1 89 1 is_stmt 0 view .LVU49
+ 345 0000 10B5     		push	{r4, lr}
+ 346              	.LCFI9:
+ 347              		.cfi_def_cfa_offset 8
+ 348              		.cfi_offset 4, -8
+ 349              		.cfi_offset 14, -4
+ 350 0002 82B0     		sub	sp, sp, #8
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 7
+
+
+ 351              	.LCFI10:
+ 352              		.cfi_def_cfa_offset 16
+ 353              		.loc 1 90 2 is_stmt 1 view .LVU50
+ 354              		.loc 1 90 14 is_stmt 0 view .LVU51
+ 355 0004 8DF80400 		strb	r0, [sp, #4]
+ 356 0008 8DF80510 		strb	r1, [sp, #5]
+ 357              		.loc 1 92 2 is_stmt 1 view .LVU52
+ 358 000c 0023     		movs	r3, #0
+ 359 000e 01A9     		add	r1, sp, #4
+ 360              	.LVL26:
+ 361              		.loc 1 92 2 is_stmt 0 view .LVU53
+ 362 0010 0248     		ldr	r0, .L23
+ 363              	.LVL27:
+ 364              		.loc 1 92 2 view .LVU54
+ 365 0012 0068     		ldr	r0, [r0]
+ 366 0014 024C     		ldr	r4, .L23+4
+ 367 0016 A047     		blx	r4
+ 368              	.LVL28:
+ 369              		.loc 1 93 1 view .LVU55
+ 370 0018 02B0     		add	sp, sp, #8
+ 371              	.LCFI11:
+ 372              		.cfi_def_cfa_offset 8
+ 373              		@ sp needed
+ 374 001a 10BD     		pop	{r4, pc}
+ 375              	.L24:
+ 376              		.align	2
+ 377              	.L23:
+ 378 001c 00000000 		.word	.LANCHOR0
+ 379 0020 00000000 		.word	xQueueGenericSendFromISR
+ 380              		.cfi_endproc
+ 381              	.LFE74:
+ 383              		.section	.bss.LCD_QueueHandle,"aw",%nobits
+ 384              		.align	2
+ 385              		.set	.LANCHOR0,. + 0
+ 388              	LCD_QueueHandle:
+ 389 0000 00000000 		.space	4
+ 390              		.section	.bss.LCD_TaskHandle,"aw",%nobits
+ 391              		.align	2
+ 392              		.set	.LANCHOR1,. + 0
+ 395              	LCD_TaskHandle:
+ 396 0000 00000000 		.space	4
+ 397              		.text
+ 398              	.Letext0:
+ 399              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 400              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 401              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 402              		.file 5 "../Core/Inc/driver_lcd.h"
+ 403              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 404              		.file 7 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 405              		.file 8 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_lcd.c
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:16     .text.LCD_Write:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:23     .text.LCD_Write:0000000000000000 LCD_Write
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:61     .text.LCD_Write:0000000000000024 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:66     .text.LCD_CommandInitiate:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:72     .text.LCD_CommandInitiate:0000000000000000 LCD_CommandInitiate
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:111    .text.LCD_CommandInitiate:000000000000001c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:117    .text.LCD_Task:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:123    .text.LCD_Task:0000000000000000 LCD_Task
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:199    .text.LCD_Task:000000000000004c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:208    .rodata.LCD_Init.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:212    .text.LCD_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:219    .text.LCD_Init:0000000000000000 LCD_Init
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:265    .text.LCD_Init:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:275    .text.LCD_CommandEnqueue:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:282    .text.LCD_CommandEnqueue:0000000000000000 LCD_CommandEnqueue
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:324    .text.LCD_CommandEnqueue:0000000000000020 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:330    .text.LCD_CommandEnqueueFromISR:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:337    .text.LCD_CommandEnqueueFromISR:0000000000000000 LCD_CommandEnqueueFromISR
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:378    .text.LCD_CommandEnqueueFromISR:000000000000001c $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:384    .bss.LCD_QueueHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:388    .bss.LCD_QueueHandle:0000000000000000 LCD_QueueHandle
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:391    .bss.LCD_TaskHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\cc6jnKGg.s:395    .bss.LCD_TaskHandle:0000000000000000 LCD_TaskHandle
+
+UNDEFINED SYMBOLS
+vTaskDelay
+xQueueReceive
+xQueueGenericCreate
+xTaskCreate
+xQueueGenericSend
+xQueueGenericSendFromISR

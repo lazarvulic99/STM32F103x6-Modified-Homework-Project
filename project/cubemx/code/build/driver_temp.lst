@@ -1,0 +1,373 @@
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"driver_temp.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	__aeabi_ui2f
+  16              		.global	__aeabi_fmul
+  17              		.section	.text.TEMP_Task,"ax",%progbits
+  18              		.align	1
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	TEMP_Task:
+  26              	.LFB70:
+  27              		.file 1 "../Core/Src/driver_temp.c"
+   1:../Core/Src/driver_temp.c **** 
+  28              		.loc 1 30 1 view -0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34              		.loc 1 30 1 is_stmt 0 view .LVU1
+  35 0000 00B5     		push	{lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 14, -4
+  39 0002 83B0     		sub	sp, sp, #12
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42              	.LVL1:
+  43              	.L2:
+  44              		.loc 1 31 2 is_stmt 1 discriminator 1 view .LVU2
+  45              	.LBB2:
+  46              		.loc 1 33 3 discriminator 1 view .LVU3
+  47 0004 104C     		ldr	r4, .L4
+  48 0006 2046     		mov	r0, r4
+  49 0008 104B     		ldr	r3, .L4+4
+  50 000a 9847     		blx	r3
+  51              	.LVL2:
+  52              		.loc 1 34 3 discriminator 1 view .LVU4
+  53 000c 4FF0FF31 		mov	r1, #-1
+  54 0010 0120     		movs	r0, #1
+  55 0012 0F4B     		ldr	r3, .L4+8
+  56 0014 9847     		blx	r3
+  57              	.LVL3:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 2
+
+
+  58              		.loc 1 36 3 discriminator 1 view .LVU5
+  59              		.loc 1 36 17 is_stmt 0 discriminator 1 view .LVU6
+  60 0016 2046     		mov	r0, r4
+  61 0018 0E4B     		ldr	r3, .L4+12
+  62 001a 9847     		blx	r3
+  63              	.LVL4:
+  64              		.loc 1 36 9 discriminator 1 view .LVU7
+  65 001c 0E4B     		ldr	r3, .L4+16
+  66 001e 9847     		blx	r3
+  67              	.LVL5:
+  68 0020 0190     		str	r0, [sp, #4]	@ float
+  69              		.loc 1 37 3 is_stmt 1 discriminator 1 view .LVU8
+  70              		.loc 1 37 9 is_stmt 0 discriminator 1 view .LVU9
+  71 0022 0E4C     		ldr	r4, .L4+20
+  72 0024 0E49     		ldr	r1, .L4+24
+  73 0026 A047     		blx	r4
+  74              	.LVL6:
+  75 0028 0190     		str	r0, [sp, #4]	@ float
+  76              		.loc 1 38 3 is_stmt 1 discriminator 1 view .LVU10
+  77              		.loc 1 38 9 is_stmt 0 discriminator 1 view .LVU11
+  78 002a 0E49     		ldr	r1, .L4+28
+  79 002c A047     		blx	r4
+  80              	.LVL7:
+  81 002e 0190     		str	r0, [sp, #4]	@ float
+  82              		.loc 1 40 3 is_stmt 1 discriminator 1 view .LVU12
+  83 0030 0223     		movs	r3, #2
+  84 0032 0022     		movs	r2, #0
+  85 0034 01A9     		add	r1, sp, #4
+  86 0036 0C48     		ldr	r0, .L4+32
+  87 0038 0068     		ldr	r0, [r0]
+  88 003a 0C4C     		ldr	r4, .L4+36
+  89 003c A047     		blx	r4
+  90              	.LVL8:
+  91              		.loc 1 41 3 discriminator 1 view .LVU13
+  92 003e C820     		movs	r0, #200
+  93 0040 0B4B     		ldr	r3, .L4+40
+  94 0042 9847     		blx	r3
+  95              	.LVL9:
+  96              	.LBE2:
+  97              		.loc 1 31 8 discriminator 1 view .LVU14
+  98 0044 DEE7     		b	.L2
+  99              	.L5:
+ 100 0046 00BF     		.align	2
+ 101              	.L4:
+ 102 0048 00000000 		.word	hadc1
+ 103 004c 00000000 		.word	HAL_ADC_Start_IT
+ 104 0050 00000000 		.word	ulTaskNotifyTake
+ 105 0054 00000000 		.word	HAL_ADC_GetValue
+ 106 0058 00000000 		.word	__aeabi_ui2f
+ 107 005c 00000000 		.word	__aeabi_fmul
+ 108 0060 0000A03A 		.word	983564288
+ 109 0064 0000C842 		.word	1120403456
+ 110 0068 00000000 		.word	.LANCHOR0
+ 111 006c 00000000 		.word	xQueueGenericSend
+ 112 0070 00000000 		.word	vTaskDelay
+ 113              		.cfi_endproc
+ 114              	.LFE70:
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 3
+
+
+ 116              		.section	.text.HAL_ADC_ConvCpltCallback,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	HAL_ADC_ConvCpltCallback
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	HAL_ADC_ConvCpltCallback:
+ 125              	.LVL10:
+ 126              	.LFB69:
+ 127              		.loc 1 23 1 view -0
+ 128              		.cfi_startproc
+ 129              		@ args = 0, pretend = 0, frame = 8
+ 130              		@ frame_needed = 0, uses_anonymous_args = 0
+ 131              		.loc 1 23 1 is_stmt 0 view .LVU16
+ 132 0000 00B5     		push	{lr}
+ 133              	.LCFI2:
+ 134              		.cfi_def_cfa_offset 4
+ 135              		.cfi_offset 14, -4
+ 136 0002 83B0     		sub	sp, sp, #12
+ 137              	.LCFI3:
+ 138              		.cfi_def_cfa_offset 16
+ 139              		.loc 1 24 2 is_stmt 1 view .LVU17
+ 140              		.loc 1 24 13 is_stmt 0 view .LVU18
+ 141 0004 0023     		movs	r3, #0
+ 142 0006 0193     		str	r3, [sp, #4]
+ 143              		.loc 1 25 2 is_stmt 1 view .LVU19
+ 144 0008 01A9     		add	r1, sp, #4
+ 145 000a 094B     		ldr	r3, .L9
+ 146 000c 1868     		ldr	r0, [r3]
+ 147              	.LVL11:
+ 148              		.loc 1 25 2 is_stmt 0 view .LVU20
+ 149 000e 094B     		ldr	r3, .L9+4
+ 150 0010 9847     		blx	r3
+ 151              	.LVL12:
+ 152              		.loc 1 26 2 is_stmt 1 view .LVU21
+ 153 0012 019B     		ldr	r3, [sp, #4]
+ 154 0014 4BB1     		cbz	r3, .L6
+ 155              		.loc 1 26 2 discriminator 1 view .LVU22
+ 156 0016 4FF0E023 		mov	r3, #-536813568
+ 157 001a 4FF08052 		mov	r2, #268435456
+ 158 001e C3F8042D 		str	r2, [r3, #3332]
+ 159              		.loc 1 26 2 discriminator 1 view .LVU23
+ 160              		.syntax unified
+ 161              	@ 26 "Core/Src/driver_temp.c" 1
+ 162 0022 BFF34F8F 		dsb
+ 163              	@ 0 "" 2
+ 164              		.loc 1 26 2 discriminator 1 view .LVU24
+ 165              	@ 26 "Core/Src/driver_temp.c" 1
+ 166 0026 BFF36F8F 		isb
+ 167              	@ 0 "" 2
+ 168              		.loc 1 26 27 discriminator 1 view .LVU25
+ 169              		.thumb
+ 170              		.syntax unified
+ 171              	.L6:
+ 172              		.loc 1 27 1 is_stmt 0 view .LVU26
+ 173 002a 03B0     		add	sp, sp, #12
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 4
+
+
+ 174              	.LCFI4:
+ 175              		.cfi_def_cfa_offset 4
+ 176              		@ sp needed
+ 177 002c 5DF804FB 		ldr	pc, [sp], #4
+ 178              	.L10:
+ 179              		.align	2
+ 180              	.L9:
+ 181 0030 00000000 		.word	.LANCHOR1
+ 182 0034 00000000 		.word	vTaskNotifyGiveFromISR
+ 183              		.cfi_endproc
+ 184              	.LFE69:
+ 186              		.section	.text.TEMP_GetCurrentValue,"ax",%progbits
+ 187              		.align	1
+ 188              		.global	TEMP_GetCurrentValue
+ 189              		.syntax unified
+ 190              		.thumb
+ 191              		.thumb_func
+ 192              		.fpu softvfp
+ 194              	TEMP_GetCurrentValue:
+ 195              	.LFB71:
+ 196              		.loc 1 46 1 is_stmt 1 view -0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 8
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 00B5     		push	{lr}
+ 201              	.LCFI5:
+ 202              		.cfi_def_cfa_offset 4
+ 203              		.cfi_offset 14, -4
+ 204 0002 83B0     		sub	sp, sp, #12
+ 205              	.LCFI6:
+ 206              		.cfi_def_cfa_offset 16
+ 207              		.loc 1 47 2 view .LVU28
+ 208              		.loc 1 47 8 is_stmt 0 view .LVU29
+ 209 0004 0023     		movs	r3, #0
+ 210 0006 0193     		str	r3, [sp, #4]	@ float
+ 211              		.loc 1 48 2 is_stmt 1 view .LVU30
+ 212 0008 4FF0FF32 		mov	r2, #-1
+ 213 000c 01A9     		add	r1, sp, #4
+ 214 000e 044B     		ldr	r3, .L13
+ 215 0010 1868     		ldr	r0, [r3]
+ 216 0012 044B     		ldr	r3, .L13+4
+ 217 0014 9847     		blx	r3
+ 218              	.LVL13:
+ 219              		.loc 1 49 2 view .LVU31
+ 220              		.loc 1 50 1 is_stmt 0 view .LVU32
+ 221 0016 0198     		ldr	r0, [sp, #4]	@ float
+ 222 0018 03B0     		add	sp, sp, #12
+ 223              	.LCFI7:
+ 224              		.cfi_def_cfa_offset 4
+ 225              		@ sp needed
+ 226 001a 5DF804FB 		ldr	pc, [sp], #4
+ 227              	.L14:
+ 228 001e 00BF     		.align	2
+ 229              	.L13:
+ 230 0020 00000000 		.word	.LANCHOR0
+ 231 0024 00000000 		.word	xQueuePeek
+ 232              		.cfi_endproc
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 5
+
+
+ 233              	.LFE71:
+ 235              		.section	.rodata.TEMP_Init.str1.4,"aMS",%progbits,1
+ 236              		.align	2
+ 237              	.LC0:
+ 238 0000 54454D50 		.ascii	"TEMP_Task\000"
+ 238      5F546173 
+ 238      6B00
+ 239              		.section	.text.TEMP_Init,"ax",%progbits
+ 240              		.align	1
+ 241              		.global	TEMP_Init
+ 242              		.syntax unified
+ 243              		.thumb
+ 244              		.thumb_func
+ 245              		.fpu softvfp
+ 247              	TEMP_Init:
+ 248              	.LFB72:
+ 249              		.loc 1 53 1 is_stmt 1 view -0
+ 250              		.cfi_startproc
+ 251              		@ args = 0, pretend = 0, frame = 0
+ 252              		@ frame_needed = 0, uses_anonymous_args = 0
+ 253 0000 10B5     		push	{r4, lr}
+ 254              	.LCFI8:
+ 255              		.cfi_def_cfa_offset 8
+ 256              		.cfi_offset 4, -8
+ 257              		.cfi_offset 14, -4
+ 258 0002 82B0     		sub	sp, sp, #8
+ 259              	.LCFI9:
+ 260              		.cfi_def_cfa_offset 16
+ 261              		.loc 1 54 2 view .LVU34
+ 262              		.loc 1 54 23 is_stmt 0 view .LVU35
+ 263 0004 0022     		movs	r2, #0
+ 264 0006 0421     		movs	r1, #4
+ 265 0008 0120     		movs	r0, #1
+ 266 000a 084B     		ldr	r3, .L17
+ 267 000c 9847     		blx	r3
+ 268              	.LVL14:
+ 269              		.loc 1 54 21 view .LVU36
+ 270 000e 084B     		ldr	r3, .L17+4
+ 271 0010 1860     		str	r0, [r3]
+ 272              		.loc 1 55 2 is_stmt 1 view .LVU37
+ 273 0012 084B     		ldr	r3, .L17+8
+ 274 0014 0193     		str	r3, [sp, #4]
+ 275 0016 0223     		movs	r3, #2
+ 276 0018 0093     		str	r3, [sp]
+ 277 001a 0023     		movs	r3, #0
+ 278 001c 4022     		movs	r2, #64
+ 279 001e 0649     		ldr	r1, .L17+12
+ 280 0020 0648     		ldr	r0, .L17+16
+ 281 0022 074C     		ldr	r4, .L17+20
+ 282 0024 A047     		blx	r4
+ 283              	.LVL15:
+ 284              		.loc 1 56 1 is_stmt 0 view .LVU38
+ 285 0026 02B0     		add	sp, sp, #8
+ 286              	.LCFI10:
+ 287              		.cfi_def_cfa_offset 8
+ 288              		@ sp needed
+ 289 0028 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 6
+
+
+ 290              	.L18:
+ 291 002a 00BF     		.align	2
+ 292              	.L17:
+ 293 002c 00000000 		.word	xQueueGenericCreate
+ 294 0030 00000000 		.word	.LANCHOR0
+ 295 0034 00000000 		.word	.LANCHOR1
+ 296 0038 00000000 		.word	.LC0
+ 297 003c 00000000 		.word	TEMP_Task
+ 298 0040 00000000 		.word	xTaskCreate
+ 299              		.cfi_endproc
+ 300              	.LFE72:
+ 302              		.section	.bss.TEMP_MailboxHandle,"aw",%nobits
+ 303              		.align	2
+ 304              		.set	.LANCHOR0,. + 0
+ 307              	TEMP_MailboxHandle:
+ 308 0000 00000000 		.space	4
+ 309              		.section	.bss.TEMP_TaskHandle,"aw",%nobits
+ 310              		.align	2
+ 311              		.set	.LANCHOR1,. + 0
+ 314              	TEMP_TaskHandle:
+ 315 0000 00000000 		.space	4
+ 316              		.text
+ 317              	.Letext0:
+ 318              		.file 2 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 319              		.file 3 "../c:\\users\\lenovo\\desktop\\gnu mcu\\arm-none-eabi-gcc-10.2.1-1.1\\arm-none-eabi\\incl
+ 320              		.file 4 "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
+ 321              		.file 5 "../Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 322              		.file 6 "../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 323              		.file 7 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h"
+ 324              		.file 8 "../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 325              		.file 9 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 326              		.file 10 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 327              		.file 11 "../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 328              		.file 12 "../Core/Inc/adc.h"
+ARM GAS  C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 driver_temp.c
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:18     .text.TEMP_Task:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:25     .text.TEMP_Task:0000000000000000 TEMP_Task
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:102    .text.TEMP_Task:0000000000000048 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:117    .text.HAL_ADC_ConvCpltCallback:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:124    .text.HAL_ADC_ConvCpltCallback:0000000000000000 HAL_ADC_ConvCpltCallback
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:181    .text.HAL_ADC_ConvCpltCallback:0000000000000030 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:187    .text.TEMP_GetCurrentValue:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:194    .text.TEMP_GetCurrentValue:0000000000000000 TEMP_GetCurrentValue
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:230    .text.TEMP_GetCurrentValue:0000000000000020 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:236    .rodata.TEMP_Init.str1.4:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:240    .text.TEMP_Init:0000000000000000 $t
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:247    .text.TEMP_Init:0000000000000000 TEMP_Init
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:293    .text.TEMP_Init:000000000000002c $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:303    .bss.TEMP_MailboxHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:307    .bss.TEMP_MailboxHandle:0000000000000000 TEMP_MailboxHandle
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:310    .bss.TEMP_TaskHandle:0000000000000000 $d
+C:\Users\Lenovo\AppData\Local\Temp\ccJcGp8G.s:314    .bss.TEMP_TaskHandle:0000000000000000 TEMP_TaskHandle
+
+UNDEFINED SYMBOLS
+__aeabi_ui2f
+__aeabi_fmul
+hadc1
+HAL_ADC_Start_IT
+ulTaskNotifyTake
+HAL_ADC_GetValue
+xQueueGenericSend
+vTaskDelay
+vTaskNotifyGiveFromISR
+xQueuePeek
+xQueueGenericCreate
+xTaskCreate
